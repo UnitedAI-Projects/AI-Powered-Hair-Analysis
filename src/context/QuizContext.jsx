@@ -8,6 +8,10 @@ export function QuizProvider({ children }) {
     porosity: null,
     treatments: [],
     treatmentTiming: null,
+    journey: null,
+    routine: [],
+    scalp: null,
+    photos: {}, // Will store { roots: base64, midLength: base64, ends: base64, face: base64 }
   })
 
   const updateAnswers = (field, value) => {
