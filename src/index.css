@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-purple-deep;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-purple-primary text-cream font-semibold rounded-full hover:bg-purple-deep transition-colors duration-200;
+  }
+}
+
+/* Animated background gradient */
+.gradient-bg {
+  background: linear-gradient(135deg, #9B7BB5 0%, #C8B8D4 50%, #9B7BB5 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Floating shapes */
+.floating-shape {
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape-1 {
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  animation-delay: 1s;
+}
+
+.shape-3 {
+  animation-delay: 2s;
+}
+
+/* Fade in animation */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
