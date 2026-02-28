@@ -4,8 +4,7 @@ export default function Landing() {
   const navigate = useNavigate()
 
   const handleStartJourney = () => {
-    // Navigate to curl journey page when created
-    navigate('/curl-journey')
+    navigate('/quiz')
   }
 
   return (
