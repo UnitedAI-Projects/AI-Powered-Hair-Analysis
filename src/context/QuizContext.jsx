@@ -12,6 +12,7 @@ export function QuizProvider({ children }) {
     routine: [],
     scalp: null,
     photos: {}, // Will store { roots: base64, midLength: base64, ends: base64, face: base64 }
+    analysis: null, // Will store the AI analysis results
   })
 
   const updateAnswers = (field, value) => {

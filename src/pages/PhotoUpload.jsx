@@ -46,15 +46,14 @@ export default function PhotoUpload() {
   }
 
   const handleContinue = () => {
-    // Save to context and proceed to next step
-    // For now, navigate to a results/analysis page
-    navigate('/analysis')
+    // Navigate to analyzing screen which will trigger the API call
+    navigate('/analyzing')
   }
 
   const handleSkipWithFewer = () => {
     // Allow proceeding with fewer photos
     if (uploadedCount > 0) {
-      navigate('/analysis')
+      navigate('/analyzing')
     }
   }
 
