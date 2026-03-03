@@ -59,39 +59,84 @@ const QUESTIONS = [
 const tierLabel = { budget:"💰 Budget-friendly", midrange:"💎 Mid-range", premium:"✨ Premium" };
 const categoryLabel = { cleanser:"Cleanser", conditioner:"Conditioner", "leave-in":"Leave-In", styling:"Styler", treatment:"Treatment", scalp:"Scalp" };
 
-async function getAIRecommendations(answers) {
-  const productList = PRODUCTS.map(p=>`ID:${p.id} | ${p.name} (${p.brand}) | Category:${p.category} | Tier:${p.tier} | Price:${p.price} | Porosity:${p.porosity.join(",")} | Goals:${p.goals.join(",")} | History:${p.history.join(",")} | Journey:${p.journey.join(",")}`).join("\n");
-  const prompt = `You are Pelora's curl care AI. Based on the user's quiz answers, select the BEST 3–4 products from our curated database. Prioritize real fit — cover different categories when possible.
+function getRecommendations(answers) {
+  const { goals=[], porosity, history=[], journey, scalp } = answers;
+  const skipPorosity = !porosity || porosity === "skip";
+  const hasChemical = history.some(h => ["relaxer","keratin","color"].includes(h));
 
-USER QUIZ ANSWERS:
-- Goals: ${answers.goals?.join(", ")||"not specified"}
-- Porosity: ${answers.porosity||"unknown"}
-- Hair history: ${answers.history?.join(", ")||"none"}
-- History recency: ${answers.historyRecency||"N/A"}
-- Journey stage: ${answers.journey||"not specified"}
-- Scalp type: ${answers.scalp||"not specified"}
+  // Score each product
+  const scored = PRODUCTS.map(p => {
+    let score = 0;
+    let reasons = [];
 
-PRODUCT DATABASE:
-${productList}
+    // Goals match (highest weight — 3pts each)
+    const goalMatches = goals.filter(g => p.goals.includes(g));
+    score += goalMatches.length * 3;
+    if (goalMatches.includes("definition")) reasons.push("great for curl definition and frizz control");
+    if (goalMatches.includes("volume")) reasons.push("helps add volume and bounce");
+    if (goalMatches.includes("length")) reasons.push("supports length retention and growth");
+    if (goalMatches.includes("damage")) reasons.push("targets damage repair");
 
-Return ONLY a JSON array (no markdown, no backticks):
-[{ "id": 3, "why": "2-3 warm, specific sentences referencing their quiz answers" }, ...]
+    // Porosity match (2pts)
+    if (!skipPorosity && p.porosity.includes(porosity)) {
+      score += 2;
+      const porosityNames = { low:"low porosity", normal:"medium porosity", high:"high porosity" };
+      reasons.push(`formulated for ${porosityNames[porosity]} hair`);
+    }
 
-Rules: 3–4 products max, different categories preferred, warm best-friend tone.`;
+    // Hair history match (2pts)
+    const historyMatches = history.filter(h => p.history.includes(h));
+    if (historyMatches.length > 0) {
+      score += 2;
+      if (hasChemical && p.history.some(h => ["relaxer","keratin","color"].includes(h))) {
+        reasons.push("ideal for chemically treated or transitioning hair");
+      } else if (history.includes("heat") && p.history.includes("heat")) {
+        reasons.push("great for heat-styled hair");
+      }
+    }
 
-  const params = new URLSearchParams({ model: "llama3:latest", max_tokens: 1000 });
-  const res = await fetch(`https://cent.ischool-iot.net/api/genai/chat/completions?${params}`, {
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json",
-      "X-API-KEY": import.meta.env.VITE_API_KEY,
-    },
-    body: JSON.stringify([{ role:"user", content:prompt }]),
+    // Journey match (1pt)
+    if (journey && p.journey.includes(journey)) {
+      score += 1;
+      const journeyNames = { start:"beginners", routine:"those building a routine", levelup:"those leveling up", transitioning:"transitioning hair" };
+      reasons.push(`recommended for ${journeyNames[journey]||"your hair journey stage"}`);
+    }
+
+    // Scalp bonus for scalp products (1pt)
+    if (p.category === "scalp" && scalp && ["dry","flaky","oily"].includes(scalp)) {
+      score += 1;
+      reasons.push("supports scalp health");
+    }
+
+    // Build warm why string
+    const why = reasons.length > 0
+      ? `This ${categoryLabel[p.category].toLowerCase()} is ${reasons.slice(0,3).join(", ")}. ${p.desc}`
+      : p.desc;
+
+    return { product: p, score, why };
   });
-  const data = await res.json();
-  console.log("API response:", JSON.stringify(data));
-  const text = data.choices?.[0]?.message?.content || "[]";
-  return JSON.parse(text.replace(/```json|```/g,"").trim());
+
+  // Sort by score, then pick top product per category (max 4 total)
+  scored.sort((a, b) => b.score - a.score);
+  const seen = new Set();
+  const results = [];
+  for (const item of scored) {
+    if (results.length >= 4) break;
+    if (!seen.has(item.product.category) && item.score > 0) {
+      seen.add(item.product.category);
+      results.push(item);
+    }
+  }
+  // If we have fewer than 3, fill with next highest scoring regardless of category
+  if (results.length < 3) {
+    for (const item of scored) {
+      if (results.length >= 3) break;
+      if (!results.find(r => r.product.id === item.product.id)) {
+        results.push(item);
+      }
+    }
+  }
+  return results;
 }
 
 // ── UI Components ─────────────────────────────────────────────────────────────
@@ -176,14 +221,16 @@ export default function App() {
 
   const canNext = () => { const v=answers[q?.id]; return v&&!(Array.isArray(v)&&v.length===0); };
 
-  const advance = async () => {
+  const advance = () => {
     if (qIdx < QUESTIONS.length-1) { setQIdx(i=>i+1); setShowFU(false); return; }
-    setScreen("loading"); setError(null);
-    try {
-      const aiRecs = await getAIRecommendations(answers);
-      const resolved = aiRecs.map(r=>({product:PRODUCTS.find(p=>p.id===r.id),why:r.why})).filter(r=>r.product);
-      setRecs(resolved); setScreen("results");
-    } catch(e) { setError("Something went wrong: " + e.message); setScreen("results"); setRecs([]); }
+    setScreen("loading");
+    setTimeout(() => {
+      try {
+        const results = getRecommendations(answers);
+        setRecs(results);
+        setScreen("results");
+      } catch(e) { setError("Something went wrong: " + e.message); setScreen("results"); setRecs([]); }
+    }, 1500);
   };
 
   const reset = () => { setScreen("landing"); setQIdx(0); setAnswers({}); setRecs(null); setShowFU(false); setError(null); };
@@ -228,7 +275,12 @@ export default function App() {
           <div style={{fontSize:14,color:C.mid,marginTop:6}}>Curated just for you based on your answers 💜</div>
         </div>
         {error && <div style={{textAlign:"center",color:"#c0392b",marginBottom:20}}>{error}</div>}
-        {recs && recs.length>0 ? recs.map(({product,why})=><ProductCard key={product.id} product={product} why={why}/>) : !error && <div style={{textAlign:"center",color:"#aaa"}}>No recommendations found.</div>}
+        {recs && recs.length>0 ? recs.map(({product,why},i)=>(
+          <div key={product.id}>
+            <div style={{fontSize:13,fontWeight:700,color:C.mid,marginBottom:4,marginLeft:4}}>#{i+1} Match</div>
+            <ProductCard product={product} why={why}/>
+          </div>
+        )) : !error && <div style={{textAlign:"center",color:"#aaa"}}>No recommendations found.</div>}
         <button onClick={reset} style={{display:"block",margin:"24px auto 0",background:"transparent",border:`2px solid ${C.primary}`,color:C.primary,padding:"12px 36px",borderRadius:50,fontSize:15,fontFamily:"'Palatino Linotype',Palatino,serif",cursor:"pointer"}}>
           Retake Quiz
         </button>
