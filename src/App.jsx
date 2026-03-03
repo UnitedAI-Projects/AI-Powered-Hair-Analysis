@@ -168,20 +168,28 @@ function OptionBtn({ selected, onClick, emoji, children }) {
 
 function ProductCard({ product, why }) {
   return (
-    <div style={{background:"#fff",borderRadius:20,padding:"20px 22px",border:`1.5px solid ${C.light}`,marginBottom:14}}>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",flexWrap:"wrap",gap:8}}>
-        <div>
-          <div style={{fontSize:11,fontWeight:700,letterSpacing:1,color:C.mid,textTransform:"uppercase",marginBottom:2}}>{categoryLabel[product.category]}</div>
-          <div style={{fontFamily:"'Palatino Linotype',Palatino,serif",fontSize:16,fontWeight:700,color:C.deep}}>{product.name}</div>
-          <div style={{fontSize:13,color:C.mid}}>{product.brand}</div>
+    <div style={{background:"#fff",borderRadius:20,padding:"20px 22px",border:`1.5px solid ${C.light}`,marginBottom:14,display:"flex",gap:16}}>
+      <img
+        src={product.img}
+        alt={product.name}
+        style={{width:90,height:90,objectFit:"contain",borderRadius:12,background:C.cream,flexShrink:0}}
+        onError={e=>{ e.target.style.display="none"; }}
+      />
+      <div style={{flex:1}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",flexWrap:"wrap",gap:8}}>
+          <div>
+            <div style={{fontSize:11,fontWeight:700,letterSpacing:1,color:C.mid,textTransform:"uppercase",marginBottom:2}}>{categoryLabel[product.category]}</div>
+            <div style={{fontFamily:"'Palatino Linotype',Palatino,serif",fontSize:16,fontWeight:700,color:C.deep}}>{product.name}</div>
+            <div style={{fontSize:13,color:C.mid}}>{product.brand}</div>
+          </div>
+          <div style={{textAlign:"right"}}>
+            <div style={{fontSize:17,fontWeight:700,color:C.primary}}>{product.price}</div>
+            <div style={{fontSize:11,color:C.mid}}>{tierLabel[product.tier]}</div>
+          </div>
         </div>
-        <div style={{textAlign:"right"}}>
-          <div style={{fontSize:17,fontWeight:700,color:C.primary}}>{product.price}</div>
-          <div style={{fontSize:11,color:C.mid}}>{tierLabel[product.tier]}</div>
+        <div style={{marginTop:12,fontSize:14,color:"#555",lineHeight:1.65}}>
+          <strong style={{color:C.primary}}>Why it works for you: </strong>{why}
         </div>
-      </div>
-      <div style={{marginTop:12,fontSize:14,color:"#555",lineHeight:1.65}}>
-        <strong style={{color:C.primary}}>Why it works for you: </strong>{why}
       </div>
     </div>
   );
@@ -268,7 +276,7 @@ export default function App() {
   // ── RESULTS ──
   if (screen==="results") return (
     <div style={{minHeight:"100vh",background:C.cream,padding:"32px 20px",fontFamily:"'Palatino Linotype',Palatino,serif"}}>
-      <div style={{maxWidth:500,margin:"0 auto"}}>
+      <div style={{maxWidth:700,margin:"0 auto"}}>
         <div style={{textAlign:"center",marginBottom:28}}>
           <PeloraLogo size={60}/>
           <div style={{fontSize:30,fontWeight:700,color:C.deep,marginTop:12}}>Your Curl Care Plan</div>
