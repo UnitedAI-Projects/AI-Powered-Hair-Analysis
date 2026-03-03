@@ -79,14 +79,14 @@ Return ONLY a JSON array (no markdown, no backticks):
 
 Rules: 3–4 products max, different categories preferred, warm best-friend tone.`;
 
-  const res = await fetch("https://cent.ischool-iot.net/api/genai/chat/completions", {
+  const params = new URLSearchParams({ model: "llama3:latest", max_tokens: 1000 });
+  const res = await fetch(`https://cent.ischool-iot.net/api/genai/chat/completions?${params}`, {
     method:"POST",
     headers:{
       "Content-Type":"application/json",
       "X-API-KEY": import.meta.env.VITE_API_KEY,
-
     },
-    body: JSON.stringify({ model:"llama3:latest", messages:[{role:"user",content:prompt}] }),
+    body: JSON.stringify([{ role:"user", content:prompt }]),
   });
   const data = await res.json();
   console.log("API response:", JSON.stringify(data));
