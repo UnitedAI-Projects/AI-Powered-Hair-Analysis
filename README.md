@@ -1,6 +1,6 @@
 # Pelora — AI-Powered Curl Care Companion
 
-A beautiful, AI-powered web app that analyzes curl patterns from photos and provides personalized hair care recommendations using the Anthropic Claude API.
+AI-powered web app that analyzes curl patterns from photos and provides personalized hair care recommendations.
 
 ## Features
 
@@ -14,10 +14,8 @@ A beautiful, AI-powered web app that analyzes curl patterns from photos and prov
 - Smooth transitions between screens
 
 ### 📸 Photo Upload
-- Drag-and-drop photo upload (4 angles)
+- Drag-and-drop photo upload (3 angles)
 - Real-time image preview
-- Base64 encoding for API submission
-- Fallback option for fewer photos
 - Progress tracking
 
 ### 🤖 AI Analysis
