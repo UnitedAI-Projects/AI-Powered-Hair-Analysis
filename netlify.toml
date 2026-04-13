@@ -1,0 +1,17 @@
+# ── netlify.toml ─────────────────────────────────────────────────────────────
+# Tells Netlify how to build and serve Pelora.
+# Commit this file to your repo root — Netlify reads it automatically.
+
+[build]
+  # The command Netlify runs to build your app
+  command = "npm run build"
+  # The folder Netlify serves as your website (Vite outputs here)
+  publish = "dist"
+  # Where your serverless functions live
+  functions = "netlify/functions"
+
+# Redirect all routes to index.html so React handles its own routing
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200

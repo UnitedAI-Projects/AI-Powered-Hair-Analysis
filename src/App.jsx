@@ -186,15 +186,13 @@ Return ONLY this JSON, no markdown, no backticks, no explanation:
 }
 
 // ── Groq / Llama 4 Scout (current provider) ───────────────────────────────────
-// Free tier: 1,000 RPD, no credit card required.
-// Rate limit headers on every response tell you exactly how many requests remain
-// today: check x-ratelimit-remaining-requests in the browser Network tab.
-// Upgrade path: swap model string to "meta-llama/llama-4-maverick-17b-128e-instruct"
-// for higher accuracy once you want to move to a paid tier.
+// The API key lives in Netlify's environment variables — never in this file.
+// This function sends photos + answers to our own serverless function at
+// /api/analyze, which then calls Groq on the server side.
+//
+// To switch to your SLM later: update netlify/functions/analyze.js only.
+// Nothing in this file needs to change when the backend provider changes.
 async function analyzeWithGroq(photos, answers) {
-  const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-  if (!apiKey) throw new Error("No Groq API key found. Add VITE_GROQ_API_KEY to your .env file.");
-
   const slotNames = { roots:"roots/crown area", mid:"mid-length", ends:"ends/tips", face:"face (for face shape and undertone)" };
   const imageBlocks = [];
 
@@ -204,28 +202,19 @@ async function analyzeWithGroq(photos, answers) {
     imageBlocks.push({ type:"image_url", image_url:{ url:`data:image/jpeg;base64,${b64}` } });
   }
 
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  // Calls our Netlify serverless function — the Groq API key never leaves the server
+  const response = await fetch("/api/analyze", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: "meta-llama/llama-4-scout-17b-16e-instruct",
-      max_tokens: 800,
-      messages: [{ role:"user", content: [...imageBlocks, { type:"text", text:buildAnalysisPrompt(answers) }] }],
-    }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ imageBlocks, answers }),
   });
 
   if (!response.ok) {
-    const err = await response.json();
-    throw new Error(err.error?.message || `Groq API error ${response.status}`);
+    const err = await response.json().catch(() => ({}));
+    throw new Error(err.error || `Analysis failed (${response.status})`);
   }
 
-  const data = await response.json();
-  const raw  = data.choices[0].message.content.trim();
-  const clean = raw.replace(/```json|```/g, "").trim();
-  return JSON.parse(clean);
+  return await response.json();
 }
 
 // ── SLM stub (future provider) ────────────────────────────────────────────────
