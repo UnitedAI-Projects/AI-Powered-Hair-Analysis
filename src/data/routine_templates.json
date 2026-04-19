@@ -1,0 +1,170 @@
+[
+  {
+    "goal": "More definition",
+    "step_order": 1,
+    "product_type": "shampoo",
+    "step_label": "Cleanse",
+    "frequency": "2-3x per week",
+    "is_required": true
+  },
+  {
+    "goal": "More definition",
+    "step_order": 2,
+    "product_type": "treatment",
+    "step_label": "Condition",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "More definition",
+    "step_order": 3,
+    "product_type": "leave-in",
+    "step_label": "Hydrate",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "More definition",
+    "step_order": 4,
+    "product_type": "styler",
+    "step_label": "Define",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "More definition",
+    "step_order": 5,
+    "product_type": "scalp",
+    "step_label": "Scalp care",
+    "frequency": "As needed",
+    "is_required": false
+  },
+  {
+    "goal": "Less frizz",
+    "step_order": 1,
+    "product_type": "shampoo",
+    "step_label": "Cleanse",
+    "frequency": "2-3x per week",
+    "is_required": true
+  },
+  {
+    "goal": "Less frizz",
+    "step_order": 2,
+    "product_type": "treatment",
+    "step_label": "Condition",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "Less frizz",
+    "step_order": 3,
+    "product_type": "treatment",
+    "step_label": "Deep treat",
+    "frequency": "1-2x per week",
+    "is_required": true
+  },
+  {
+    "goal": "Less frizz",
+    "step_order": 4,
+    "product_type": "leave-in",
+    "step_label": "Smooth",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "Less frizz",
+    "step_order": 5,
+    "product_type": "styler",
+    "step_label": "Seal",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "Less frizz",
+    "step_order": 6,
+    "product_type": "scalp",
+    "step_label": "Scalp care",
+    "frequency": "As needed",
+    "is_required": false
+  },
+  {
+    "goal": "Moisture + softness",
+    "step_order": 1,
+    "product_type": "shampoo",
+    "step_label": "Cleanse",
+    "frequency": "1-2x per week",
+    "is_required": true
+  },
+  {
+    "goal": "Moisture + softness",
+    "step_order": 2,
+    "product_type": "treatment",
+    "step_label": "Deep treat",
+    "frequency": "1-2x per week",
+    "is_required": true
+  },
+  {
+    "goal": "Moisture + softness",
+    "step_order": 3,
+    "product_type": "leave-in",
+    "step_label": "Hydrate",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "Moisture + softness",
+    "step_order": 4,
+    "product_type": "styler",
+    "step_label": "Style",
+    "frequency": "Every wash",
+    "is_required": false
+  },
+  {
+    "goal": "Moisture + softness",
+    "step_order": 5,
+    "product_type": "scalp",
+    "step_label": "Scalp care",
+    "frequency": "As needed",
+    "is_required": false
+  },
+  {
+    "goal": "Length retention",
+    "step_order": 1,
+    "product_type": "shampoo",
+    "step_label": "Cleanse",
+    "frequency": "Every 5-7 days",
+    "is_required": true
+  },
+  {
+    "goal": "Length retention",
+    "step_order": 2,
+    "product_type": "treatment",
+    "step_label": "Deep treat + bond",
+    "frequency": "Weekly",
+    "is_required": true
+  },
+  {
+    "goal": "Length retention",
+    "step_order": 3,
+    "product_type": "leave-in",
+    "step_label": "Protect ends",
+    "frequency": "Every wash",
+    "is_required": true
+  },
+  {
+    "goal": "Length retention",
+    "step_order": 4,
+    "product_type": "scalp",
+    "step_label": "Stimulate scalp",
+    "frequency": "2-3x per week",
+    "is_required": true
+  },
+  {
+    "goal": "Length retention",
+    "step_order": 5,
+    "product_type": "styler",
+    "step_label": "Low manipulation style",
+    "frequency": "Every wash",
+    "is_required": false
+  }
+]

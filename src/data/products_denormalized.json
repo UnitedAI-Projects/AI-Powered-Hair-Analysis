@@ -1,0 +1,3304 @@
+[
+  {
+    "product_id": "P01",
+    "product_name": "Raw Shea Butter Deep Moisturizing Shampoo",
+    "brand": "SheaMoisture",
+    "product_type": "shampoo",
+    "tier": "drugstore",
+    "price_usd": 10.99,
+    "size_oz": 13.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Sulfate-free moisturizing shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Decyl glucoside",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Aloe barbadensis leaf juice",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 9
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 10
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 11
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "PRO-HYD",
+      "EMO-LW",
+      "EMO-HV",
+      "BOND",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM",
+      "PRO-HYD",
+      "EMO-LW"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0038TVHGG",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0038TVHGG&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P02",
+    "product_name": "Hydrating Argan Oil Hair Mask and Deep Conditioner",
+    "brand": "Arvazallia",
+    "product_type": "treatment",
+    "tier": "drugstore",
+    "price_usd": 11.95,
+    "size_oz": 8.45,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Argan-based deep conditioner.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Behentrimonium methosulfate",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Dimethicone",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "CO-WASH",
+      "EMO-LW",
+      "SIL-NW",
+      "PRO-HYD",
+      "HUM",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "CO-WASH",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "CO-WASH",
+      "EMO-LW",
+      "SIL-NW",
+      "PRO-HYD"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00I32AN4K",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00I32AN4K&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P03",
+    "product_name": "Coconut & Hibiscus Curl & Shine Defining Styling Gel",
+    "brand": "SheaMoisture",
+    "product_type": "styler",
+    "tier": "drugstore",
+    "price_usd": 10.99,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Hydrating styling gel for defined curls.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Aloe barbadensis leaf juice",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Hydroxyethylcellulose",
+        "position": 3
+      },
+      {
+        "ingredient_name": "VP/VA copolymer",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Hydrolyzed silk",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Coconut oil",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 9
+      }
+    ],
+    "tags": [
+      "HUM",
+      "HOLD",
+      "PRO-HYD",
+      "EMO-HV",
+      "EMO-MED",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "HOLD"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "HOLD",
+      "PRO-HYD"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B09DD9T7T3",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09DD9T7T3&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P04",
+    "product_name": "Coconut & Hibiscus Curl Enhancing Smoothie",
+    "brand": "SheaMoisture",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 10.99,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Rich moisturizing leave-in.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Coconut oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Silk amino acids",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "EMO-HV",
+      "EMO-MED",
+      "PRO-HYD",
+      "HUM",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "EMO-HV",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "EMO-HV",
+      "EMO-MED",
+      "PRO-HYD",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00SCG9CMC",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00SCG9CMC&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P05",
+    "product_name": "Rosemary Mint Scalp & Hair Strengthening Oil",
+    "brand": "Mielle",
+    "product_type": "scalp",
+    "tier": "drugstore",
+    "price_usd": 9.99,
+    "size_oz": 2.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Scalp-stimulating hair oil.",
+    "ingredients": [
+      {
+        "ingredient_name": "Mineral oil",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Castor oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Rosemary oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Peppermint oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Biotin",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "FLAG",
+      "EMO-HV",
+      "SCALP"
+    ],
+    "tags_top_3": [
+      "FLAG",
+      "EMO-HV",
+      "SCALP"
+    ],
+    "tags_top_5": [
+      "FLAG",
+      "EMO-HV",
+      "SCALP"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07MFXQW8Z",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07MFXQW8Z&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P06",
+    "product_name": "Pomegranate & Honey Moisturizing and Detangling Shampoo",
+    "brand": "Mielle",
+    "product_type": "shampoo",
+    "tier": "drugstore",
+    "price_usd": 13.29,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Moisturizing shampoo with honey.",
+    "ingredients": [
+      {
+        "ingredient_name": "Sodium lauroyl methyl isethionate",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Babassu oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Rosemary oil",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 9
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "EMO-MED",
+      "SCALP",
+      "PRO-HYD",
+      "BOND",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM",
+      "EMO-MED",
+      "SCALP"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07GZYV5ZX",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07GZYV5ZX&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P07",
+    "product_name": "Leave-In Conditioner",
+    "brand": "Pattern Beauty",
+    "product_type": "leave-in",
+    "tier": "mid",
+    "price_usd": 25.0,
+    "size_oz": 7.8,
+    "curl_fit": [
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Rich hydrating cream.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Aloe barbadensis leaf juice",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Honey",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Jojoba oil",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Castor oil",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 9
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 10
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "HUM",
+      "EMO-HV",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "HUM",
+      "EMO-HV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B093TJXTM1",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B093TJXTM1&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P08",
+    "product_name": "Jojoba Oil Blend",
+    "brand": "Pattern Beauty",
+    "product_type": "scalp",
+    "tier": "mid",
+    "price_usd": 24.0,
+    "size_oz": 4.2,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Jojoba-based scalp oil.",
+    "ingredients": [
+      {
+        "ingredient_name": "Jojoba oil",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Olive oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Tocopherol",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Coconut oil",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "EMO-LW",
+      "EMO-MED",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "EMO-LW",
+      "EMO-MED",
+      "PRESERV"
+    ],
+    "tags_top_5": [
+      "EMO-LW",
+      "EMO-MED",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07YS98RBH",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07YS98RBH&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P09",
+    "product_name": "Baomint\u2122 Deep Conditioning Treatment",
+    "brand": "adwoa beauty",
+    "product_type": "treatment",
+    "tier": "mid",
+    "price_usd": 28.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Baobab and mint deep conditioner.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Behentrimonium methosulfate",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Baobab oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Peppermint oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Hydrolyzed quinoa",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 9
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "CO-WASH",
+      "EMO-MED",
+      "SCALP",
+      "HUM",
+      "PRO-HYD",
+      "BOND",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "CO-WASH",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "CO-WASH",
+      "EMO-MED",
+      "SCALP",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07P5ZSZRV",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07P5ZSZRV&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P10",
+    "product_name": "Baomint\u2122 Leave-In Conditioning Styler",
+    "brand": "adwoa beauty",
+    "product_type": "leave-in",
+    "tier": "mid",
+    "price_usd": 30.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c"
+    ],
+    "description": "Low porosity specific formula.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Behentrimonium methosulfate",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Aloe barbadensis leaf juice",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Rosehip oil",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 9
+      }
+    ],
+    "tags": [
+      "HUM",
+      "FATTY",
+      "CO-WASH",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "FATTY",
+      "CO-WASH"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "FATTY",
+      "CO-WASH"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07P5V2DSY",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07P5V2DSY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P11",
+    "product_name": "Rose Water Curl Defining Mousse",
+    "brand": "tgin",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 18.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Lightweight defining mousse.",
+    "ingredients": [
+      {
+        "ingredient_name": "VP/VA copolymer",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Polyquaternium-11",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Aloe barbadensis leaf juice",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Hydrolyzed silk",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "HOLD",
+      "HUM",
+      "PRO-HYD",
+      "BOND",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HOLD",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "HOLD",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B084SRGZLY",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B084SRGZLY&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P12",
+    "product_name": "Hair-Wash Milky Hair Cleanser",
+    "brand": "Bread Beauty Supply",
+    "product_type": "shampoo",
+    "tier": "mid",
+    "price_usd": 26.0,
+    "size_oz": 10.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Gentle clarifying shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Sodium cocoyl isethionate",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Coco-glucoside",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Aloe barbadensis leaf juice",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 9
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "PRO-HYD",
+      "BOND",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0BSFGSZ47",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BSFGSZ47&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P13",
+    "product_name": "Blue Tansy Reparative Mask",
+    "brand": "adwoa beauty",
+    "product_type": "treatment",
+    "tier": "mid",
+    "price_usd": 32.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Rich honey-based mask.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Behentrimonium methosulfate",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Honey",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Hydrolyzed keratin",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "CO-WASH",
+      "HUM",
+      "EMO-HV",
+      "PRO-HYD",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "CO-WASH",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "CO-WASH",
+      "HUM",
+      "EMO-HV",
+      "PRO-HYD"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B09QBWDJ7N",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09QBWDJ7N&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P14",
+    "product_name": "N\u00ba.3 Hair Perfector",
+    "brand": "Olaplex",
+    "product_type": "treatment",
+    "tier": "luxury",
+    "price_usd": 30.0,
+    "size_oz": 3.3,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Bond repair treatment.",
+    "ingredients": [
+      {
+        "ingredient_name": "Bis-aminopropyl diglycol dimaleate",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Cetyl alcohol",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glyceryl stearate",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Stearyl alcohol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Sweet almond oil",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "BOND",
+      "FATTY",
+      "EMO-LW",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "BOND",
+      "FATTY"
+    ],
+    "tags_top_5": [
+      "BOND",
+      "FATTY",
+      "EMO-LW"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00S8I9TAK",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00S8I9TAK&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P15",
+    "product_name": "N\u00ba.4 Bond Maintenance Shampoo",
+    "brand": "Olaplex",
+    "product_type": "shampoo",
+    "tier": "luxury",
+    "price_usd": 32.0,
+    "size_oz": 8.5,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Bond maintenance shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Sodium lauroyl methyl isethionate",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Bis-aminopropyl diglycol dimaleate",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "BOND",
+      "PRO-HYD",
+      "HUM",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "BOND"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "BOND",
+      "PRO-HYD",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B074MTYQ5Q",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B074MTYQ5Q&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P16",
+    "product_name": "Low-Poo Original Mild Lather Cleanser",
+    "brand": "DevaCurl",
+    "product_type": "shampoo",
+    "tier": "luxury",
+    "price_usd": 30.0,
+    "size_oz": 10.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c"
+    ],
+    "description": "Premium gentle cleanser.",
+    "ingredients": [
+      {
+        "ingredient_name": "Sodium cocoyl isethionate",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Sodium methyl cocoyl taurate",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 7
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0009RUAH8",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0009RUAH8&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P17",
+    "product_name": "Styling Cream",
+    "brand": "Pattern Beauty",
+    "product_type": "styler",
+    "tier": "luxury",
+    "price_usd": 34.0,
+    "size_oz": 6.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a"
+    ],
+    "description": "Heat protection styling cream.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Cyclopentasiloxane",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Dimethicone",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Hydrolyzed silk",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 8
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 9
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "SIL-NW",
+      "HUM",
+      "EMO-LW",
+      "PRO-HYD",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "SIL-NW"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "SIL-NW",
+      "HUM",
+      "EMO-LW"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B09X4TR4CV",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09X4TR4CV&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P18",
+    "product_name": "Multi-Use Pure Oil Blend",
+    "brand": "Melanin Haircare",
+    "product_type": "scalp",
+    "tier": "luxury",
+    "price_usd": 40.0,
+    "size_oz": 4.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Multi-seed scalp oil blend.",
+    "ingredients": [
+      {
+        "ingredient_name": "Argan oil",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Black seed oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Rosemary oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Peppermint oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Tocopherol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "EMO-LW",
+      "EMO-MED",
+      "SCALP",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "EMO-LW",
+      "EMO-MED",
+      "SCALP"
+    ],
+    "tags_top_5": [
+      "EMO-LW",
+      "EMO-MED",
+      "SCALP",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07MWWMFPZ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07MWWMFPZ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P19",
+    "product_name": "Multi-Peptide Serum for Hair Density",
+    "brand": "The Ordinary",
+    "product_type": "scalp",
+    "tier": "luxury",
+    "price_usd": 38.0,
+    "size_oz": 4.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Caffeine-infused scalp serum.",
+    "ingredients": [
+      {
+        "ingredient_name": "Caffeine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Niacinamide",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Rosemary oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Nettle extract",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Hyaluronic acid",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "SCALP",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SCALP"
+    ],
+    "tags_top_5": [
+      "SCALP",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07L5YMGLB",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07L5YMGLB&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P20",
+    "product_name": "Aceite de Moska Pre-Shampoo Scalp & Hair Oil",
+    "brand": "Ceremonia",
+    "product_type": "scalp",
+    "tier": "luxury",
+    "price_usd": 28.0,
+    "size_oz": 4.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Pre-wash scalp treatment.",
+    "ingredients": [
+      {
+        "ingredient_name": "Jojoba oil",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Rosemary oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Peppermint oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Tocopherol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "EMO-LW",
+      "EMO-MED",
+      "SCALP",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "EMO-LW",
+      "EMO-MED",
+      "SCALP"
+    ],
+    "tags_top_5": [
+      "EMO-LW",
+      "EMO-MED",
+      "SCALP",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B08G9T9WZF",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B08G9T9WZF&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P21",
+    "product_name": "Hydrating Shampoo",
+    "brand": "Rizos Curls",
+    "product_type": "shampoo",
+    "tier": "mid",
+    "price_usd": 22.0,
+    "size_oz": 10.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c"
+    ],
+    "description": "Nourishing curl shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Decyl glucoside",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Hydrolyzed quinoa",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 7
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B082VFFC63",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B082VFFC63&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P22",
+    "product_name": "Be Curly Advanced Curl Enhancer Cream",
+    "brand": "Aveda",
+    "product_type": "styler",
+    "tier": "luxury",
+    "price_usd": 30.0,
+    "size_oz": 6.7,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Light hold styling cream.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "PVP",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "HUM",
+      "EMO-LW",
+      "HOLD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "HUM",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "HUM",
+      "EMO-LW",
+      "HOLD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B09JGSQTHZ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09JGSQTHZ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P23",
+    "product_name": "Total Results Curl Please Shampoo",
+    "brand": "Matrix",
+    "product_type": "shampoo",
+    "tier": "drugstore",
+    "price_usd": 9.99,
+    "size_oz": 10.1,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Budget gentle curl shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Decyl glucoside",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Sweet almond oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B001ET7AMO",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001ET7AMO&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P24",
+    "product_name": "Curl Nourish Defining Gel",
+    "brand": "Garnier Fructis",
+    "product_type": "styler",
+    "tier": "drugstore",
+    "price_usd": 6.99,
+    "size_oz": 13.5,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a"
+    ],
+    "description": "Budget defining gel.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "VP/VA copolymer",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "HUM",
+      "HOLD",
+      "EMO-LW",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "HOLD",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "HOLD",
+      "EMO-LW",
+      "PRESERV",
+      "FLAG"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B09T8Q6Z9Z",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09T8Q6Z9Z&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P25",
+    "product_name": "Curl Talk Leave-In Conditioner",
+    "brand": "Not Your Mothers",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 8.99,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Drugstore curl leave-in.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "PVP",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-LW",
+      "HOLD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-LW",
+      "HOLD"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-LW",
+      "HOLD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07HM96KCN",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07HM96KCN&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P26",
+    "product_name": "Curl Maker Defining Gel",
+    "brand": "Camille Rose",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 16.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b"
+    ],
+    "description": "Natural flaxseed gel.",
+    "ingredients": [
+      {
+        "ingredient_name": "Flaxseed extract",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "HOLD",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HOLD",
+      "HUM",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "HOLD",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0081K2R2U",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0081K2R2U&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P27",
+    "product_name": "Curl Love Moisture Milk",
+    "brand": "Camille Rose",
+    "product_type": "leave-in",
+    "tier": "mid",
+    "price_usd": 18.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Moisturizing curl milk.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "EMO-HV",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "EMO-HV",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B006FJPKT6",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B006FJPKT6&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P28",
+    "product_name": "Hair Milk Deep Conditioner",
+    "brand": "Carols Daughter",
+    "product_type": "treatment",
+    "tier": "mid",
+    "price_usd": 16.99,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Mid-tier deep conditioner.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 6
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "EMO-HV",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "HUM",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "EMO-HV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B01N17FM0H",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01N17FM0H&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P29",
+    "product_name": "Curl La La Defining Curl Custard",
+    "brand": "Aunt Jackies",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 10.99,
+    "size_oz": 15.0,
+    "curl_fit": [
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Heavy moisture custard for coily hair.",
+    "ingredients": [
+      {
+        "ingredient_name": "Shea butter",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Olive oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "EMO-HV",
+      "EMO-MED",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "EMO-HV",
+      "EMO-MED",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "EMO-HV",
+      "EMO-MED",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07MQD7KN5",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07MQD7KN5&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P30",
+    "product_name": "Dont Shrink Flaxseed Gel",
+    "brand": "Kinky-Curly",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 15.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b"
+    ],
+    "description": "Natural flaxseed styling gel.",
+    "ingredients": [
+      {
+        "ingredient_name": "Flaxseed extract",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HOLD",
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HOLD",
+      "HUM",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "HOLD",
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B007QJKXCM",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B007QJKXCM&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P31",
+    "product_name": "Knot Today Leave-In Detangler",
+    "brand": "Kinky-Curly",
+    "product_type": "leave-in",
+    "tier": "mid",
+    "price_usd": 14.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c"
+    ],
+    "description": "Detangling leave-in.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-LW",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-LW",
+      "PRO-HYD"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-LW",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0015SU3A0",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0015SU3A0&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P32",
+    "product_name": "Rice Water Split End Therapy",
+    "brand": "Mielle",
+    "product_type": "treatment",
+    "tier": "drugstore",
+    "price_usd": 13.29,
+    "size_oz": 5.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Bond-focused drugstore treatment.",
+    "ingredients": [
+      {
+        "ingredient_name": "Bis-aminopropyl diglycol dimaleate",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "BOND",
+      "PRO-HYD",
+      "EMO-MED",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "BOND",
+      "PRO-HYD",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "BOND",
+      "PRO-HYD",
+      "EMO-MED",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B097DWQPRG",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B097DWQPRG&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P33",
+    "product_name": "Butter Cream Daily Moisturizer",
+    "brand": "tgin",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 11.99,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Protein-free daily moisturizer.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 3
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-MED",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-MED",
+      "PRESERV"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-MED",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07K4SZ4PJ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07K4SZ4PJ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P34",
+    "product_name": "Don't Despair, Repair! Deep Conditioning Hair Mask",
+    "brand": "Briogeo",
+    "product_type": "treatment",
+    "tier": "luxury",
+    "price_usd": 39.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Intensive damage repair mask.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed rice protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Bis-aminopropyl diglycol dimaleate",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 6
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "BOND",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "HUM",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "BOND"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00XQ5Y45G",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00XQ5Y45G&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P35",
+    "product_name": "Blossom & Bloom Volumizing Shampoo",
+    "brand": "Briogeo",
+    "product_type": "shampoo",
+    "tier": "luxury",
+    "price_usd": 28.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c"
+    ],
+    "description": "Thickening gentle shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Decyl glucoside",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Ginger extract",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00XQ5Y46K",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00XQ5Y46K&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P36",
+    "product_name": "Scalp Revival Charcoal + Coconut Oil Micro-Exfoliating Scalp Scrub Shampoo",
+    "brand": "Briogeo",
+    "product_type": "shampoo",
+    "tier": "luxury",
+    "price_usd": 42.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Scalp-focused gentle shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Sodium cocoyl isethionate",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Tea tree oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Peppermint oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Witch hazel",
+        "position": 6
+      },
+      {
+        "ingredient_name": "Citric acid",
+        "position": 7
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 8
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "SCALP",
+      "HUM",
+      "BOND",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "SCALP"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "SCALP",
+      "HUM"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0784FQPGH",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0784FQPGH&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P37",
+    "product_name": "Coconut & Hibiscus Curl & Shine Hair Lotion",
+    "brand": "SheaMoisture",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 10.99,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Multi-benefit leave-in.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "VP/VA copolymer",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-LW",
+      "HOLD",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-LW",
+      "HOLD"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-LW",
+      "HOLD",
+      "PRESERV",
+      "FLAG"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07YDTFRLZ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07YDTFRLZ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P38",
+    "product_name": "Curl Recovery Melt-Down Extreme Repair Mask",
+    "brand": "Ouidad",
+    "product_type": "treatment",
+    "tier": "luxury",
+    "price_usd": 28.0,
+    "size_oz": 8.5,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Restorative curl mask.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Panthenol",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "HUM",
+      "PRO-HYD",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "PRO-HYD",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "PRO-HYD",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07XQMTZMQ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07XQMTZMQ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P39",
+    "product_name": "Coconut Curling Cream",
+    "brand": "Cantu",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 6.99,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Heavy curl cream for coily hair.",
+    "ingredients": [
+      {
+        "ingredient_name": "Shea butter",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Coconut oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 6
+      }
+    ],
+    "tags": [
+      "EMO-HV",
+      "EMO-MED",
+      "PRO-HYD",
+      "HUM",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "EMO-HV",
+      "EMO-MED",
+      "PRO-HYD"
+    ],
+    "tags_top_5": [
+      "EMO-HV",
+      "EMO-MED",
+      "PRO-HYD",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00A7VXJL8",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00A7VXJL8&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P40",
+    "product_name": "Avocado Hydrating Hair Masque",
+    "brand": "Cantu",
+    "product_type": "treatment",
+    "tier": "drugstore",
+    "price_usd": 7.99,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Drugstore avocado mask.",
+    "ingredients": [
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 6
+      }
+    ],
+    "tags": [
+      "EMO-MED",
+      "EMO-HV",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "EMO-MED",
+      "EMO-HV",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "EMO-MED",
+      "EMO-HV",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B07D6GFZQ5",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07D6GFZQ5&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P41",
+    "product_name": "Ultra Defining Gel",
+    "brand": "DevaCurl",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 24.0,
+    "size_oz": 5.1,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Wave-specific creme gel.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "VP/VA copolymer",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HUM",
+      "HOLD",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "HOLD",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "HOLD",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B01N3GLSQ8",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01N3GLSQ8&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P42",
+    "product_name": "Curl Defining Styling Cream",
+    "brand": "Bumble and bumble",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 30.0,
+    "size_oz": 5.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c"
+    ],
+    "description": "Light wave-hold styler.",
+    "ingredients": [
+      {
+        "ingredient_name": "PVP",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HOLD",
+      "EMO-LW",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HOLD",
+      "EMO-LW",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "HOLD",
+      "EMO-LW",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B09YMNV9TQ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B09YMNV9TQ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P43",
+    "product_name": "Whipped Gelly",
+    "brand": "Alikay Naturals",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 16.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Cream-gel hybrid for coily hair.",
+    "ingredients": [
+      {
+        "ingredient_name": "Flaxseed extract",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 6
+      }
+    ],
+    "tags": [
+      "HOLD",
+      "EMO-HV",
+      "EMO-MED",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HOLD",
+      "EMO-HV",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "HOLD",
+      "EMO-HV",
+      "EMO-MED",
+      "HUM",
+      "PRO-HYD"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B006FKQPOC",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B006FKQPOC&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P44",
+    "product_name": "Orange Marmalade",
+    "brand": "Ecoslay",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 22.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Plant-based flax and marshmallow gel.",
+    "ingredients": [
+      {
+        "ingredient_name": "Flaxseed extract",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Marshmallow root extract",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Castor oil",
+        "position": 5
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 6
+      }
+    ],
+    "tags": [
+      "HOLD",
+      "HUM",
+      "EMO-MED",
+      "EMO-HV",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HOLD",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "HOLD",
+      "HUM",
+      "EMO-MED",
+      "EMO-HV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0722NHVL2",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0722NHVL2&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P45",
+    "product_name": "Almond Jai Twisting Butter",
+    "brand": "Qhemet Biologics",
+    "product_type": "styler",
+    "tier": "mid",
+    "price_usd": 24.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Heavy twisting butter for coily hair.",
+    "ingredients": [
+      {
+        "ingredient_name": "Shea butter",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Sweet almond oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "EMO-HV",
+      "EMO-LW",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "EMO-HV",
+      "EMO-LW",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "EMO-HV",
+      "EMO-LW",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B004SDXMCO",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B004SDXMCO&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P46",
+    "product_name": "Algae Renew Deep Conditioning Mask",
+    "brand": "Camille Rose",
+    "product_type": "treatment",
+    "tier": "mid",
+    "price_usd": 22.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Protein-free moisturizing conditioner.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Coconut oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Shea butter",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "EMO-MED",
+      "EMO-HV",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "EMO-MED",
+      "EMO-HV"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "EMO-MED",
+      "EMO-HV",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00J66KQMU",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00J66KQMU&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P47",
+    "product_name": "Moroccan Rose Leave-In Conditioner",
+    "brand": "Alikay Naturals",
+    "product_type": "leave-in",
+    "tier": "mid",
+    "price_usd": 18.0,
+    "size_oz": 8.0,
+    "curl_fit": [
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Protein-free leave-in.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Rosehip oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-LW"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00QKBQXKQ",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00QKBQXKQ&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P48",
+    "product_name": "Fragrance-Free Shampoo",
+    "brand": "Vanicream",
+    "product_type": "shampoo",
+    "tier": "drugstore",
+    "price_usd": 11.49,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Fragrance-free sensitive scalp shampoo.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Decyl glucoside",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 3
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "PRESERV"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00P0H8C2W",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00P0H8C2W&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P49",
+    "product_name": "Skin Relief Scalp Soothing Serum",
+    "brand": "Aveeno",
+    "product_type": "scalp",
+    "tier": "drugstore",
+    "price_usd": 12.99,
+    "size_oz": 4.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Oat-based fragrance-free scalp serum.",
+    "ingredients": [
+      {
+        "ingredient_name": "Niacinamide",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 3
+      }
+    ],
+    "tags": [
+      "SCALP",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SCALP",
+      "HUM",
+      "PRESERV"
+    ],
+    "tags_top_5": [
+      "SCALP",
+      "HUM",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B074V9WKYX",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B074V9WKYX&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P50",
+    "product_name": "Hydrate Sea Kale Deep Conditioner",
+    "brand": "Matrix Biolage",
+    "product_type": "treatment",
+    "tier": "mid",
+    "price_usd": 25.99,
+    "size_oz": 10.1,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b",
+      "3c"
+    ],
+    "description": "Balanced protein-moisture mask.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cetearyl alcohol",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Avocado oil",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "FATTY",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "FATTY",
+      "HUM",
+      "EMO-MED"
+    ],
+    "tags_top_5": [
+      "FATTY",
+      "HUM",
+      "EMO-MED",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B01LXQM8X3",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01LXQM8X3&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P51",
+    "product_name": "Grapeseed Clarify and Shine Rinse",
+    "brand": "Cantu",
+    "product_type": "shampoo",
+    "tier": "drugstore",
+    "price_usd": 6.99,
+    "size_oz": 12.0,
+    "curl_fit": [
+      "3a",
+      "3b",
+      "3c",
+      "4a",
+      "4b",
+      "4c"
+    ],
+    "description": "Budget gentle cleanser.",
+    "ingredients": [
+      {
+        "ingredient_name": "Cocamidopropyl betaine",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Grapeseed oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Glycerin",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Hydrolyzed wheat protein",
+        "position": 4
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 5
+      }
+    ],
+    "tags": [
+      "SURF-GEN",
+      "EMO-LW",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "tags_top_3": [
+      "SURF-GEN",
+      "EMO-LW",
+      "HUM"
+    ],
+    "tags_top_5": [
+      "SURF-GEN",
+      "EMO-LW",
+      "HUM",
+      "PRO-HYD",
+      "PRESERV"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B00B2FHZOG",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00B2FHZOG&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  },
+  {
+    "product_id": "P52",
+    "product_name": "Moroccan Argan Oil Leave-In Spray",
+    "brand": "OGX",
+    "product_type": "leave-in",
+    "tier": "drugstore",
+    "price_usd": 8.99,
+    "size_oz": 6.0,
+    "curl_fit": [
+      "2a",
+      "2b",
+      "2c",
+      "3a",
+      "3b"
+    ],
+    "description": "Humectant-forward spray leave-in.",
+    "ingredients": [
+      {
+        "ingredient_name": "Glycerin",
+        "position": 1
+      },
+      {
+        "ingredient_name": "Argan oil",
+        "position": 2
+      },
+      {
+        "ingredient_name": "Phenoxyethanol",
+        "position": 3
+      },
+      {
+        "ingredient_name": "Fragrance",
+        "position": 4
+      }
+    ],
+    "tags": [
+      "HUM",
+      "EMO-LW",
+      "PRESERV",
+      "FLAG"
+    ],
+    "tags_top_3": [
+      "HUM",
+      "EMO-LW",
+      "PRESERV"
+    ],
+    "tags_top_5": [
+      "HUM",
+      "EMO-LW",
+      "PRESERV",
+      "FLAG"
+    ],
+    "affiliate_url": "https://www.amazon.com/dp/B0BWVQJQN3",
+    "image_url": "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BWVQJQN3&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1"
+  }
+]

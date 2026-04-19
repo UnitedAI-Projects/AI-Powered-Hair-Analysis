@@ -1,0 +1,647 @@
+[
+  {
+    "rule_id": "R001",
+    "severity": "exclude",
+    "category": "Density",
+    "trigger_desc": "Fine density user — heavy butters in top 3",
+    "condition": {
+      "user": {
+        "density": "Fine"
+      },
+      "product": {
+        "tags_in_top_n": {
+          "tags": [
+            "EMO-HV"
+          ],
+          "n": 3
+        }
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Heavy butters weigh fine hair down, flattening curls and creating a greasy feel.",
+    "user_message": "We filtered out products with heavy butters because they can weigh down fine hair."
+  },
+  {
+    "rule_id": "R002",
+    "severity": "penalize",
+    "category": "Density",
+    "trigger_desc": "Fine density user — heavy butters anywhere",
+    "condition": {
+      "user": {
+        "density": "Fine"
+      },
+      "product": {
+        "has_tags": [
+          "EMO-HV"
+        ]
+      }
+    },
+    "score_adjustment": -2,
+    "reason": "Even in lower concentrations, heavy butters can build up over time on fine hair.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R003",
+    "severity": "exclude",
+    "category": "Porosity",
+    "trigger_desc": "Low porosity user — non-water-soluble silicones in top 5",
+    "condition": {
+      "user": {
+        "porosity": "Low"
+      },
+      "product": {
+        "tags_in_top_n": {
+          "tags": [
+            "SIL-NW"
+          ],
+          "n": 5
+        }
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Non-water-soluble silicones sit on the tight low-porosity cuticle, blocking moisture.",
+    "user_message": "Low porosity hair absorbs better without heavy silicones — we focused on formulas that let moisture in."
+  },
+  {
+    "rule_id": "R004",
+    "severity": "exclude",
+    "category": "Porosity",
+    "trigger_desc": "Low porosity user — mineral oil or petrolatum",
+    "condition": {
+      "user": {
+        "porosity": "Low"
+      },
+      "product": {
+        "contains_ingredients": [
+          "Mineral oil",
+          "Petrolatum"
+        ]
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Mineral oil and petrolatum create buildup on low porosity hair with no moisture penetration.",
+    "user_message": "Low porosity hair can get buildup from mineral oil and petrolatum."
+  },
+  {
+    "rule_id": "R005",
+    "severity": "boost",
+    "category": "Porosity",
+    "trigger_desc": "Low porosity user — lightweight oils and humectants in top 5",
+    "condition": {
+      "user": {
+        "porosity": "Low"
+      },
+      "product": {
+        "tags_in_top_n": {
+          "tags": [
+            "EMO-LW",
+            "HUM"
+          ],
+          "n": 5
+        }
+      }
+    },
+    "score_adjustment": 1,
+    "reason": "Lightweight oils penetrate the tight cuticle. Humectants pull moisture in.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R006",
+    "severity": "boost",
+    "category": "Porosity",
+    "trigger_desc": "High porosity user — proteins and bond builders",
+    "condition": {
+      "user": {
+        "porosity": "High"
+      },
+      "product": {
+        "has_tags": [
+          "PRO-HYD",
+          "BOND"
+        ]
+      }
+    },
+    "score_adjustment": 2,
+    "reason": "High porosity means the cuticle is raised or damaged — proteins patch it and bond builders repair it.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R007",
+    "severity": "penalize",
+    "category": "Porosity",
+    "trigger_desc": "High porosity user — leave-in or styler without sealing",
+    "condition": {
+      "user": {
+        "porosity": "High"
+      },
+      "product": {
+        "type_in": [
+          "leave-in",
+          "styler"
+        ],
+        "missing_all_tags": [
+          "EMO-MED",
+          "EMO-HV",
+          "SIL-W"
+        ]
+      }
+    },
+    "score_adjustment": -1,
+    "reason": "High porosity hair loses moisture fast without a sealing layer.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R008",
+    "severity": "exclude",
+    "category": "Hair history",
+    "trigger_desc": "Relaxed/permed user — clarifying sulfates",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Relaxed/permed"
+      },
+      "product": {
+        "has_tags": [
+          "SURF-CLAR"
+        ]
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Relaxed hair is already porous and protein-compromised. Sulfates strip what remains.",
+    "user_message": "Since your hair has been relaxed or permed, we prioritized sulfate-free cleansers."
+  },
+  {
+    "rule_id": "R009",
+    "severity": "exclude",
+    "category": "Hair history",
+    "trigger_desc": "Color/bleach user — sulfates in top 3",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Color/bleach"
+      },
+      "product": {
+        "tags_in_top_n": {
+          "tags": [
+            "SURF-CLAR"
+          ],
+          "n": 3
+        }
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Sulfates strip color molecules and further damage bleached cuticle.",
+    "user_message": "Color-treated hair keeps its vibrancy longer with sulfate-free shampoos."
+  },
+  {
+    "rule_id": "R010",
+    "severity": "boost",
+    "category": "Hair history",
+    "trigger_desc": "Color/bleach user — bond repair products",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Color/bleach"
+      },
+      "product": {
+        "has_tags": [
+          "BOND"
+        ]
+      }
+    },
+    "score_adjustment": 3,
+    "reason": "Bleach breaks disulfide bonds. Bond repair is the single most important category for this user.",
+    "user_message": "Bond repair rebuilds the structure bleach breaks down."
+  },
+  {
+    "rule_id": "R011",
+    "severity": "boost",
+    "category": "Hair history",
+    "trigger_desc": "Relaxed/permed user — bond repair",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Relaxed/permed"
+      },
+      "product": {
+        "has_tags": [
+          "BOND"
+        ]
+      }
+    },
+    "score_adjustment": 3,
+    "reason": "Relaxers break both disulfide and keratin bonds.",
+    "user_message": "Bond repair helps maintain the integrity of relaxed hair."
+  },
+  {
+    "rule_id": "R012",
+    "severity": "penalize",
+    "category": "Hair history",
+    "trigger_desc": "Relaxed/permed user — protein in top 3 on non-treatment",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Relaxed/permed"
+      },
+      "product": {
+        "tags_in_top_n": {
+          "tags": [
+            "PRO-HYD"
+          ],
+          "n": 3
+        },
+        "type_not": "treatment"
+      }
+    },
+    "score_adjustment": -2,
+    "reason": "Relaxed hair is sensitive to protein overload in daily products.",
+    "user_message": "We prioritized moisture-forward products — relaxed hair can get stiff with too much protein."
+  },
+  {
+    "rule_id": "R013",
+    "severity": "warn",
+    "category": "Hair history",
+    "trigger_desc": "Heat styled user — surface bond repair need",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Heat styled"
+      },
+      "routine": {
+        "missing_all_tags": [
+          "BOND"
+        ]
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Frequent heat damages bonds even when ends look fine.",
+    "user_message": "Consider adding a bond treatment weekly — heat styling breaks bonds even when ends look healthy."
+  },
+  {
+    "rule_id": "R014",
+    "severity": "boost",
+    "category": "Hair history",
+    "trigger_desc": "Protective styles user — scalp actives",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Protective styles"
+      },
+      "product": {
+        "has_tags": [
+          "SCALP"
+        ]
+      }
+    },
+    "score_adjustment": 2,
+    "reason": "Protective styles often hide scalp buildup and irritation.",
+    "user_message": "Scalp care is especially important when wearing protective styles."
+  },
+  {
+    "rule_id": "R015",
+    "severity": "exclude",
+    "category": "Scalp",
+    "trigger_desc": "Sensitive scalp — fragrance in cleansing/scalp products",
+    "condition": {
+      "user": {
+        "scalp": "Sensitive"
+      },
+      "product": {
+        "contains_ingredients": [
+          "Fragrance"
+        ],
+        "type_in": [
+          "shampoo",
+          "conditioner",
+          "scalp"
+        ]
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Synthetic fragrance is the #1 trigger for scalp irritation and contact dermatitis.",
+    "user_message": "We only surfaced fragrance-free options for your sensitive scalp."
+  },
+  {
+    "rule_id": "R016",
+    "severity": "exclude",
+    "category": "Scalp",
+    "trigger_desc": "Sensitive scalp — formaldehyde releasers",
+    "condition": {
+      "user": {
+        "scalp": "Sensitive"
+      },
+      "product": {
+        "contains_ingredients": [
+          "DMDM hydantoin",
+          "Quaternium-15",
+          "Imidazolidinyl urea",
+          "Diazolidinyl urea"
+        ]
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Formaldehyde-releasing preservatives cause scalp irritation and allergic reactions.",
+    "user_message": "We avoided products with formaldehyde-releasing preservatives."
+  },
+  {
+    "rule_id": "R017",
+    "severity": "exclude",
+    "category": "Scalp",
+    "trigger_desc": "Sensitive scalp — strong essential oils in scalp care top 5",
+    "condition": {
+      "user": {
+        "scalp": "Sensitive"
+      },
+      "product": {
+        "type": "scalp",
+        "contains_ingredients_top_n": {
+          "ingredients": [
+            "Tea tree oil",
+            "Peppermint oil"
+          ],
+          "n": 5
+        }
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "High concentrations of essential oils cause burning on sensitive scalps.",
+    "user_message": "Sensitive scalps can react to strong essential oils — we picked gentler alternatives."
+  },
+  {
+    "rule_id": "R018",
+    "severity": "boost",
+    "category": "Scalp",
+    "trigger_desc": "Oily scalp — clarifying and balancing ingredients in shampoo",
+    "condition": {
+      "user": {
+        "scalp": "Oily"
+      },
+      "product": {
+        "type": "shampoo",
+        "contains_any_ingredients": [
+          "Salicylic acid",
+          "Witch hazel",
+          "Tea tree oil",
+          "Kaolin clay"
+        ]
+      }
+    },
+    "score_adjustment": 1,
+    "reason": "These ingredients control sebum production and dissolve scalp buildup.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R019",
+    "severity": "penalize",
+    "category": "Scalp",
+    "trigger_desc": "Oily scalp — heavy oils in shampoo",
+    "condition": {
+      "user": {
+        "scalp": "Oily"
+      },
+      "product": {
+        "type": "shampoo",
+        "has_tags": [
+          "EMO-HV"
+        ]
+      }
+    },
+    "score_adjustment": -2,
+    "reason": "Heavy butters in shampoo leave residue on already-oily scalps.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R020",
+    "severity": "boost",
+    "category": "Scalp",
+    "trigger_desc": "Dry scalp — nourishing scalp oils",
+    "condition": {
+      "user": {
+        "scalp": "Dry"
+      },
+      "product": {
+        "type": "scalp",
+        "has_tags": [
+          "EMO-LW",
+          "EMO-MED"
+        ]
+      }
+    },
+    "score_adjustment": 2,
+    "reason": "Lightweight and medium oils deliver moisture to a dry scalp without clogging follicles.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R021",
+    "severity": "penalize",
+    "category": "Goal + profile",
+    "trigger_desc": "Definition goal + humid climate — glycerin top 5",
+    "condition": {
+      "user": {
+        "goal": "More definition",
+        "climate": "High humidity"
+      },
+      "product": {
+        "contains_ingredients_top_n": {
+          "ingredients": [
+            "Glycerin"
+          ],
+          "n": 5
+        }
+      }
+    },
+    "score_adjustment": -1,
+    "reason": "Glycerin pulls moisture from humid air into hair, causing frizz and loss of definition.",
+    "user_message": "In high humidity, glycerin can work against curl definition."
+  },
+  {
+    "rule_id": "R022",
+    "severity": "boost",
+    "category": "Goal + profile",
+    "trigger_desc": "Moisture goal + high porosity — protein + emollient combo",
+    "condition": {
+      "user": {
+        "goal": "Moisture + softness",
+        "porosity": "High"
+      },
+      "product": {
+        "has_all_tags": [
+          "PRO-HYD"
+        ],
+        "has_any_tags": [
+          "EMO-MED",
+          "EMO-HV"
+        ]
+      }
+    },
+    "score_adjustment": 2,
+    "reason": "High porosity needs both protein to patch the cuticle and emollients to seal in moisture.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R023",
+    "severity": "boost",
+    "category": "Goal + profile",
+    "trigger_desc": "Length retention + coily — sealing emollients in leave-in/styler/treatment",
+    "condition": {
+      "user": {
+        "goal": "Length retention",
+        "curl_in": [
+          "4a",
+          "4b",
+          "4c"
+        ]
+      },
+      "product": {
+        "has_tags": [
+          "EMO-HV"
+        ],
+        "type_in": [
+          "leave-in",
+          "styler",
+          "treatment"
+        ]
+      }
+    },
+    "score_adjustment": 2,
+    "reason": "Coily hair retains length when moisture is sealed in.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R024",
+    "severity": "boost",
+    "category": "Goal + profile",
+    "trigger_desc": "Frizz goal + medium-high porosity — water-soluble silicones in styler",
+    "condition": {
+      "user": {
+        "goal": "Less frizz",
+        "porosity_in": [
+          "Medium",
+          "High"
+        ]
+      },
+      "product": {
+        "type": "styler",
+        "has_tags": [
+          "SIL-W"
+        ]
+      }
+    },
+    "score_adjustment": 1,
+    "reason": "Water-soluble silicones seal the cuticle against humidity without buildup.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R025",
+    "severity": "exclude",
+    "category": "Curl pattern",
+    "trigger_desc": "Wavy user — heavy stylers in top 3",
+    "condition": {
+      "user": {
+        "curl_in": [
+          "2a",
+          "2b",
+          "2c"
+        ]
+      },
+      "product": {
+        "type": "styler",
+        "tags_in_top_n": {
+          "tags": [
+            "EMO-HV"
+          ],
+          "n": 3
+        }
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Wavy hair loses wave pattern and gets weighed down by heavy stylers.",
+    "user_message": "We stuck to lighter stylers that support wave pattern."
+  },
+  {
+    "rule_id": "R026",
+    "severity": "warn",
+    "category": "Protein balance",
+    "trigger_desc": "Protein overload — 3+ products with PRO-HYD in routine",
+    "condition": {
+      "routine": {
+        "count_tags": {
+          "tag": "PRO-HYD",
+          "min": 3
+        }
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Stacking too many protein products causes stiffness, brittleness, and breakage.",
+    "user_message": "Your routine has several protein-rich products — use the treatment no more than once a week."
+  },
+  {
+    "rule_id": "R027",
+    "severity": "exclude",
+    "category": "Coconut sensitivity",
+    "trigger_desc": "Coconut-sensitive user — coconut oil present",
+    "condition": {
+      "user": {
+        "coconut_sensitive": true
+      },
+      "product": {
+        "contains_ingredients": [
+          "Coconut oil"
+        ]
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Some users experience coconut oil as protein.",
+    "user_message": "We avoided coconut oil based on your preference."
+  },
+  {
+    "rule_id": "R028",
+    "severity": "penalize",
+    "category": "Curl + porosity",
+    "trigger_desc": "4c + low porosity — heavy butters without humectants",
+    "condition": {
+      "user": {
+        "curl": "4c",
+        "porosity": "Low"
+      },
+      "product": {
+        "has_tags": [
+          "EMO-HV"
+        ],
+        "missing_tags": [
+          "HUM"
+        ]
+      }
+    },
+    "score_adjustment": -2,
+    "reason": "4c low-porosity hair needs moisture in before sealing. Butters alone sit on top.",
+    "user_message": null
+  },
+  {
+    "rule_id": "R029",
+    "severity": "boost",
+    "category": "Recent damage",
+    "trigger_desc": "Recent bleach (6mo) — bond repair boost",
+    "condition": {
+      "user": {
+        "hair_history_contains": "Color/bleach",
+        "damage_recent": true
+      },
+      "product": {
+        "has_tags": [
+          "BOND"
+        ]
+      }
+    },
+    "score_adjustment": 2,
+    "reason": "Fresh bleach damage benefits most from intensive bond repair.",
+    "user_message": "Since your color is recent, we prioritized bond repair heavily."
+  },
+  {
+    "rule_id": "R030",
+    "severity": "warn",
+    "category": "Porosity unknown",
+    "trigger_desc": "User skipped porosity — assume medium",
+    "condition": {
+      "user": {
+        "porosity": "Unknown"
+      }
+    },
+    "score_adjustment": 0,
+    "reason": "Without porosity data, default to medium and flag confidence.",
+    "user_message": "We are using medium porosity as a starting point — as you try products, we will learn what works."
+  }
+]

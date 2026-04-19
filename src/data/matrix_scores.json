@@ -1,0 +1,199 @@
+[
+  {
+    "goal": "More definition",
+    "product_type": "shampoo",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "More definition",
+    "product_type": "treatment",
+    "base_score": 3,
+    "porosity_modifier": {
+      "Low": -1,
+      "High": 1
+    },
+    "density_modifier": {
+      "Fine": -1
+    },
+    "curl_group_modifier": {
+      "coily": 2
+    }
+  },
+  {
+    "goal": "More definition",
+    "product_type": "leave-in",
+    "base_score": 4,
+    "porosity_modifier": {
+      "High": 1
+    },
+    "density_modifier": {},
+    "curl_group_modifier": {
+      "coily": 1
+    }
+  },
+  {
+    "goal": "More definition",
+    "product_type": "styler",
+    "base_score": 5,
+    "porosity_modifier": {
+      "Low": -2,
+      "High": 0
+    },
+    "density_modifier": {
+      "Fine": -2
+    },
+    "curl_group_modifier": {
+      "wavy": -1
+    }
+  },
+  {
+    "goal": "More definition",
+    "product_type": "scalp",
+    "base_score": 2,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Less frizz",
+    "product_type": "shampoo",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Less frizz",
+    "product_type": "treatment",
+    "base_score": 4,
+    "porosity_modifier": {
+      "High": 1,
+      "Low": -2
+    },
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Less frizz",
+    "product_type": "leave-in",
+    "base_score": 5,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Less frizz",
+    "product_type": "styler",
+    "base_score": 4,
+    "porosity_modifier": {},
+    "density_modifier": {
+      "Fine": -1
+    },
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Less frizz",
+    "product_type": "scalp",
+    "base_score": 2,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Moisture + softness",
+    "product_type": "shampoo",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Moisture + softness",
+    "product_type": "treatment",
+    "base_score": 5,
+    "porosity_modifier": {
+      "Low": -2
+    },
+    "density_modifier": {
+      "Fine": -2
+    },
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Moisture + softness",
+    "product_type": "leave-in",
+    "base_score": 5,
+    "porosity_modifier": {
+      "Low": -2
+    },
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Moisture + softness",
+    "product_type": "styler",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Moisture + softness",
+    "product_type": "scalp",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Length retention",
+    "product_type": "shampoo",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Length retention",
+    "product_type": "treatment",
+    "base_score": 4,
+    "porosity_modifier": {
+      "High": 1
+    },
+    "density_modifier": {
+      "Fine": -1
+    },
+    "curl_group_modifier": {
+      "coily": 1
+    }
+  },
+  {
+    "goal": "Length retention",
+    "product_type": "leave-in",
+    "base_score": 5,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Length retention",
+    "product_type": "styler",
+    "base_score": 3,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {}
+  },
+  {
+    "goal": "Length retention",
+    "product_type": "scalp",
+    "base_score": 4,
+    "porosity_modifier": {},
+    "density_modifier": {},
+    "curl_group_modifier": {
+      "coily": 1
+    }
+  }
+]
