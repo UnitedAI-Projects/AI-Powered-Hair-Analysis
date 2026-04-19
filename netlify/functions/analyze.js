@@ -1,20 +1,15 @@
 // ── Pelora / Netlify Function: analyze.js ────────────────────────────────────
 //
 // This function runs on Netlify's servers, never in the user's browser.
-// The GROQ_API_KEY environment variable is set in the Netlify dashboard and
-// is never included in the built frontend JS — which is the whole point.
+// The GEMINI_API_KEY environment variable is set in the Netlify dashboard and
+// is never included in the built frontend JS.
 //
-// The frontend calls:  POST /.netlify/functions/analyze
-// This function calls: POST https://api.groq.com/openai/v1/chat/completions
+// The frontend calls:  POST /api/analyze
+// This function calls: POST https://generativelanguage.googleapis.com/...
 // Then returns the parsed result back to the frontend.
-//
-// To switch to your SLM later, replace the fetch call below with your
-// SLM inference endpoint. The request/response contract with the frontend
-// stays exactly the same — nothing in App.jsx needs to change.
 // ─────────────────────────────────────────────────────────────────────────────
 
 export default async (request) => {
-  // Only allow POST requests
   if (request.method !== "POST") {
     return new Response(JSON.stringify({ error: "Method not allowed" }), {
       status: 405,
@@ -22,11 +17,10 @@ export default async (request) => {
     });
   }
 
-  // API key lives here on the server — never sent to the browser
-  const apiKey = process.env.GROQ_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return new Response(
-      JSON.stringify({ error: "GROQ_API_KEY is not set in Netlify environment variables." }),
+      JSON.stringify({ error: "GEMINI_API_KEY is not set in Netlify environment variables." }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -82,47 +76,77 @@ Return ONLY this JSON, no markdown, no backticks, no explanation:
   "healthSummary": "1 warm sentence about hair health"
 }`;
 
-  // ── Call Groq ───────────────────────────────────────────────────────────────
-  // To switch to your SLM: replace this fetch block with your inference call.
-  // Keep the same response shape: return JSON matching the schema above.
-  let groqResponse;
+  // ── Convert imageBlocks to Gemini's content format ──────────────────────────
+  // Groq used { type: "image_url", image_url: { url: "data:..." } }
+  // Gemini uses { inlineData: { mimeType: "image/jpeg", data: "<base64>" } }
+  const geminiParts = [];
+
+  for (const block of imageBlocks) {
+    if (block.type === "text") {
+      geminiParts.push({ text: block.text });
+    } else if (block.type === "image_url") {
+      const dataUrl = block.image_url?.url || "";
+      // dataUrl is "data:image/jpeg;base64,<base64data>"
+      const match = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
+      if (match) {
+        geminiParts.push({
+          inlineData: {
+            mimeType: match[1],
+            data: match[2],
+          },
+        });
+      }
+    }
+  }
+
+  // Add the analysis prompt as the final text part
+  geminiParts.push({ text: prompt });
+
+  // ── Call Gemini 2.5 Pro ─────────────────────────────────────────────────────
+  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${apiKey}`;
+
+  let geminiResponse;
   try {
-    groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    geminiResponse = await fetch(geminiUrl, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${apiKey}`,
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "meta-llama/llama-4-scout-17b-16e-instruct",
-        max_tokens: 800,
-        messages: [{
-          role: "user",
-          content: [...imageBlocks, { type: "text", text: prompt }],
-        }],
+        contents: [
+          {
+            role: "user",
+            parts: geminiParts,
+          },
+        ],
+        generationConfig: {
+          maxOutputTokens: 800,
+          temperature: 0.4,
+        },
       }),
     });
   } catch (err) {
     return new Response(
-      JSON.stringify({ error: `Failed to reach Groq: ${err.message}` }),
+      JSON.stringify({ error: `Failed to reach Gemini: ${err.message}` }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
 
-  if (!groqResponse.ok) {
-    const errData = await groqResponse.json().catch(() => ({}));
+  if (!geminiResponse.ok) {
+    const errData = await geminiResponse.json().catch(() => ({}));
     return new Response(
-      JSON.stringify({ error: errData.error?.message || `Groq error ${groqResponse.status}` }),
-      { status: groqResponse.status, headers: { "Content-Type": "application/json" } }
+      JSON.stringify({ error: errData.error?.message || `Gemini error ${geminiResponse.status}` }),
+      { status: geminiResponse.status, headers: { "Content-Type": "application/json" } }
     );
   }
 
-  const data = await groqResponse.json();
-  const raw   = data.choices?.[0]?.message?.content?.trim();
+  const data = await geminiResponse.json();
+
+  // Gemini response shape:
+  // data.candidates[0].content.parts[0].text
+  const raw = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
 
   if (!raw) {
     return new Response(
-      JSON.stringify({ error: "Empty response from Groq." }),
+      JSON.stringify({ error: "Empty response from Gemini." }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -135,7 +159,7 @@ Return ONLY this JSON, no markdown, no backticks, no explanation:
     result = JSON.parse(clean);
   } catch {
     return new Response(
-      JSON.stringify({ error: "Groq returned non-JSON output.", raw }),
+      JSON.stringify({ error: "Gemini returned non-JSON output.", raw }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -146,7 +170,7 @@ Return ONLY this JSON, no markdown, no backticks, no explanation:
   });
 };
 
-// Tell Netlify to use the newer "functions v2" format (ES modules, Request/Response API)
+// Tell Netlify to use the newer "functions v2" format
 export const config = {
   path: "/api/analyze",
 };
