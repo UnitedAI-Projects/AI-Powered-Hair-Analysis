@@ -1,11 +1,11 @@
 // ── Pelora / Netlify Function: analyze.js ────────────────────────────────────
 //
 // This function runs on Netlify's servers, never in the user's browser.
-// The GEMINI_API_KEY environment variable is set in the Netlify dashboard and
+// The GROQ_API_KEY environment variable is set in the Netlify dashboard and
 // is never included in the built frontend JS.
 //
 // The frontend calls:  POST /api/analyze
-// This function calls: POST https://generativelanguage.googleapis.com/...
+// This function calls: POST https://api.groq.com/openai/v1/chat/completions
 // Then returns the parsed result back to the frontend.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -17,10 +17,10 @@ export default async (request) => {
     });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     return new Response(
-      JSON.stringify({ error: "GEMINI_API_KEY is not set in Netlify environment variables." }),
+      JSON.stringify({ error: "GROQ_API_KEY is not set in Netlify environment variables." }),
       { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -45,6 +45,8 @@ export default async (request) => {
   }
 
   // ── Build the analysis prompt ───────────────────────────────────────────────
+  // Note: answers.goals is a single string (e.g. "frizz"), not an array.
+  // answers.history is still an array.
   const prompt = `You are Pelora, a curl care expert performing a visual hair analysis.
 
 STEP 1 — VISUAL ANALYSIS (use photos only, ignore everything below this line):
@@ -76,77 +78,45 @@ Return ONLY this JSON, no markdown, no backticks, no explanation:
   "healthSummary": "1 warm sentence about hair health"
 }`;
 
-  // ── Convert imageBlocks to Gemini's content format ──────────────────────────
-  // Groq used { type: "image_url", image_url: { url: "data:..." } }
-  // Gemini uses { inlineData: { mimeType: "image/jpeg", data: "<base64>" } }
-  const geminiParts = [];
-
-  for (const block of imageBlocks) {
-    if (block.type === "text") {
-      geminiParts.push({ text: block.text });
-    } else if (block.type === "image_url") {
-      const dataUrl = block.image_url?.url || "";
-      // dataUrl is "data:image/jpeg;base64,<base64data>"
-      const match = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
-      if (match) {
-        geminiParts.push({
-          inlineData: {
-            mimeType: match[1],
-            data: match[2],
-          },
-        });
-      }
-    }
-  }
-
-  // Add the analysis prompt as the final text part
-  geminiParts.push({ text: prompt });
-
-  // ── Call Gemini 2.5 Pro ─────────────────────────────────────────────────────
-  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=${apiKey}`;
-
-  let geminiResponse;
+  // ── Call Groq ───────────────────────────────────────────────────────────────
+  let groqResponse;
   try {
-    geminiResponse = await fetch(geminiUrl, {
+    groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
       body: JSON.stringify({
-        contents: [
-          {
-            role: "user",
-            parts: geminiParts,
-          },
-        ],
-        generationConfig: {
-          maxOutputTokens: 800,
-          temperature: 0.4,
-        },
+        model: "meta-llama/llama-4-scout-17b-16e-instruct",
+        max_tokens: 800,
+        messages: [{
+          role: "user",
+          content: [...imageBlocks, { type: "text", text: prompt }],
+        }],
       }),
     });
   } catch (err) {
     return new Response(
-      JSON.stringify({ error: `Failed to reach Gemini: ${err.message}` }),
+      JSON.stringify({ error: `Failed to reach Groq: ${err.message}` }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
 
-  if (!geminiResponse.ok) {
-    const errData = await geminiResponse.json().catch(() => ({}));
+  if (!groqResponse.ok) {
+    const errData = await groqResponse.json().catch(() => ({}));
     return new Response(
-      JSON.stringify({ error: errData.error?.message || `Gemini error ${geminiResponse.status}` }),
-      { status: geminiResponse.status, headers: { "Content-Type": "application/json" } }
+      JSON.stringify({ error: errData.error?.message || `Groq error ${groqResponse.status}` }),
+      { status: groqResponse.status, headers: { "Content-Type": "application/json" } }
     );
   }
 
-  const data = await geminiResponse.json();
-
-  // Gemini response shape:
-  // data.candidates[0].content.parts[0].text
-  const raw = data.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+  const data = await groqResponse.json();
+  const raw = data.choices?.[0]?.message?.content?.trim();
 
   if (!raw) {
     return new Response(
-      JSON.stringify({ error: "Empty response from Gemini." }),
+      JSON.stringify({ error: "Empty response from Groq." }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
@@ -159,7 +129,7 @@ Return ONLY this JSON, no markdown, no backticks, no explanation:
     result = JSON.parse(clean);
   } catch {
     return new Response(
-      JSON.stringify({ error: "Gemini returned non-JSON output.", raw }),
+      JSON.stringify({ error: "Groq returned non-JSON output.", raw }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
