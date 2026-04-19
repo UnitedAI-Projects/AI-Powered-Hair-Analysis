@@ -56,7 +56,7 @@ Look at the photos and determine:
 
 STEP 2 — CONTEXT (do NOT use this to change your visual classifications above):
 The following quiz answers are for personalizing care advice only. They must NOT influence curl type, face shape, or undertone — those come exclusively from the photos.
-- Goals: ${(answers.goals || []).join(", ") || "not specified"}
+- Goals: ${answers.goals || "not specified"}
 - Porosity: ${answers.porosity || "skipped"}
 - Hair history: ${(answers.history || []).join(", ") || "none"}
 - Journey: ${answers.journey || "not specified"}
