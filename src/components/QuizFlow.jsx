@@ -1,10 +1,7 @@
 // src/components/QuizFlow.jsx
-// Quiz order: [AgeConsent] → Goals → Density → Porosity → History → Journey → Scalp → Photos
-// AgeConsent is a separate exported screen rendered by App.jsx before the quiz.
-// If photos skipped → Visual Hair Type screen → Results
-// If photos uploaded → Results (AI classifies)
+// Quiz order: [AgeConsent] → Goals → Density → Porosity → History → Journey → Scalp → VisualHairType → Results
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 const T = {
   redDeep:"#7A0E1E", redMid:"#9B1B30", redSoft:"#C4485A",
@@ -18,9 +15,9 @@ const T = {
 const serif = "'Cormorant Garamond', Georgia, serif";
 const sans  = "'DM Sans', system-ui, sans-serif";
 
-const TOTAL_STEPS = 7;
+const TOTAL_STEPS = 8; // 7 quiz questions + 1 visual hair type screen
 
-const CURL_TYPE_MAP = {
+export const CURL_TYPE_MAP = {
   "2a": { curlType:"2A", curlTypeName:"Loose Wave",    description:"You have beautiful loose S-waves that form naturally when wet. Your waves are lightweight and respond well to mousse and light creams — heavy products can weigh them down." },
   "2b": { curlType:"2B", curlTypeName:"Defined Wave",  description:"Your hair forms defined S-waves that hug the head slightly. You're right in the sweet spot between wavy and curly — a good curl cream and diffuser can really make your waves pop." },
   "2c": { curlType:"2C", curlTypeName:"Wavy/Curly",    description:"Your waves are thick and coarse with a tendency toward frizz. You're on the border of wavy and curly — styling on soaking wet hair and using the praying hands method works best for you." },
@@ -48,7 +45,6 @@ function QuizHeader({ step, total }) {
   );
 }
 
-// Interstitial header used by AgeConsent — no step number, progress bar at 0
 function InterstitialHeader({ label }) {
   return (
     <header style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(253,250,244,0.95)",backdropFilter:"blur(16px)",WebkitBackdropFilter:"blur(16px)",borderBottom:`1px solid rgba(201,160,60,0.15)`,padding:"16px 24px"}}>
@@ -58,21 +54,6 @@ function InterstitialHeader({ label }) {
       </div>
       <div style={{maxWidth:600,margin:"0 auto",height:4,background:T.creamMid,borderRadius:4,overflow:"hidden"}}>
         <div style={{height:"100%",background:`linear-gradient(90deg,${T.redDeep},${T.redMid})`,borderRadius:4,width:"0%"}}/>
-      </div>
-    </header>
-  );
-}
-
-function ConsentHeader() {
-  const pct = (6 / TOTAL_STEPS) * 100;
-  return (
-    <header style={{position:"fixed",top:0,left:0,right:0,zIndex:100,background:"rgba(253,250,244,0.95)",backdropFilter:"blur(16px)",WebkitBackdropFilter:"blur(16px)",borderBottom:`1px solid rgba(201,160,60,0.15)`,padding:"16px 24px"}}>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",maxWidth:600,margin:"0 auto 10px"}}>
-        <span style={{fontFamily:serif,fontSize:22,fontWeight:600,fontStyle:"italic",background:`linear-gradient(135deg,${T.redMid},${T.redSoft})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>pelora</span>
-        <span style={{fontSize:12,color:T.brownMuted,fontWeight:400}}>Before you proceed</span>
-      </div>
-      <div style={{maxWidth:600,margin:"0 auto",height:4,background:T.creamMid,borderRadius:4,overflow:"hidden"}}>
-        <div style={{height:"100%",background:`linear-gradient(90deg,${T.redDeep},${T.redMid})`,borderRadius:4,width:`${pct}%`,transition:"width 0.5s"}}/>
       </div>
     </header>
   );
@@ -145,11 +126,6 @@ function QWrap({ category, title, subtitle, footnote, children, onBack, onNext, 
 }
 
 // ── Age verification consent ──────────────────────────────────────────────────
-// Props:
-//   onAccept  — user confirmed 18+, proceed to quiz Q1
-//   onBack    — return to landing page
-//   onExit    — user says they are under 18, return to landing
-//   onNavigate — for privacy policy link
 export function AgeConsent({ onAccept, onBack, onExit, onNavigate }) {
   const [checked, setChecked] = useState(false);
 
@@ -171,12 +147,12 @@ export function AgeConsent({ onAccept, onBack, onExit, onNavigate }) {
           </svg>
         </div>
 
-        <div style={{fontSize:10,fontWeight:500,letterSpacing:"0.16em",textTransform:"uppercase",color:T.redMid,marginBottom:8}}>Age requirement</div>
+        <div style={{fontSize:10,fontWeight:500,letterSpacing:"0.16em",textTransform:"uppercase",color:T.redMid,marginBottom:8}}>Age &amp; consent</div>
         <div style={{fontFamily:serif,fontSize:"clamp(26px,5vw,32px)",fontWeight:500,lineHeight:1.2,color:T.brownText,marginBottom:12}}>
-          You must be 18 or older to use Pelora.
+          You must be 13 or older to use Pelora.
         </div>
         <div style={{fontSize:14,fontWeight:400,color:T.brownMuted,lineHeight:1.65,marginBottom:32}}>
-          Pelora uses AI to analyze photos and generate personalized hair recommendations. Our service is intended for adults only. Please confirm your age before continuing.
+          Pelora generates personalized hair recommendations based on your quiz answers. Please confirm you are old enough to continue.
         </div>
 
         {/* Age checkbox */}
@@ -190,7 +166,7 @@ export function AgeConsent({ onAccept, onBack, onExit, onNavigate }) {
           </div>
           <input type="checkbox" checked={checked} onChange={e=>setChecked(e.target.checked)} style={{display:"none"}}/>
           <span style={{fontSize:14,color:checked?T.brownText:T.brownMuted,lineHeight:1.6,fontWeight:checked?500:400,transition:"color 0.2s"}}>
-            I confirm that I am 18 years of age or older.
+            I confirm that I am 13 years of age or older.
           </span>
         </label>
 
@@ -213,11 +189,11 @@ export function AgeConsent({ onAccept, onBack, onExit, onNavigate }) {
             onMouseEnter={e=>{if(checked){e.currentTarget.style.transform="translateY(-1px)";e.currentTarget.style.boxShadow=`0 8px 24px rgba(122,14,30,0.2)`;}}}
             onMouseLeave={e=>{e.currentTarget.style.transform="";e.currentTarget.style.boxShadow="";}}
           >
-            Start My Hair Analysis
+            Start My Hair Profile
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </button>
 
-          {/* Under-18 exit link */}
+          {/* Under-13 exit link */}
           <div style={{textAlign:"center",marginTop:16}}>
             <button
               onClick={onExit}
@@ -225,7 +201,7 @@ export function AgeConsent({ onAccept, onBack, onExit, onNavigate }) {
               onMouseEnter={e=>e.currentTarget.style.color=T.brownText}
               onMouseLeave={e=>e.currentTarget.style.color=T.brownMuted}
             >
-              I am under 18 — exit quiz
+              I am under 13 — exit quiz
             </button>
           </div>
         </div>
@@ -269,9 +245,9 @@ function Q2_Density({ answers, onAnswer, onBack, onNext }) {
 // ── Q3 — Porosity ─────────────────────────────────────────────────────────────
 function Q3_Porosity({ answers, onAnswer, onBack, onNext }) {
   const OPTIONS = [
-    {value:"high",   label:"Sooner than 40 minutes",        desc:"High Porosity"},
-    {value:"normal", label:"Between 40 minutes and 2 hours",desc:"Medium Porosity"},
-    {value:"low",    label:"Between 2 and 7 hours",          desc:"Low Porosity"},
+    {value:"high",   label:"Sooner than 40 minutes"},
+    {value:"normal", label:"Between 40 minutes and 2 hours"},
+    {value:"low",    label:"Between 2 and 7 hours"},
   ];
   const val = answers.porosity;
   return (
@@ -333,64 +309,35 @@ function Q6_Scalp({ answers, onAnswer, onBack, onNext }) {
   );
 }
 
-// ── Q7 — Photo upload ─────────────────────────────────────────────────────────
-function PhotoSlot({ slotId, label, hint, optional, file, onFile, consentGiven }) {
-  const inputRef = useRef();
-  const preview = file ? URL.createObjectURL(file) : null;
-  return (
-    <div onClick={()=>consentGiven&&inputRef.current?.click()}
-      style={{border:`2px dashed ${file?T.redMid:T.creamMid}`,borderRadius:16,padding:"28px 16px",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:10,cursor:consentGiven?"pointer":"not-allowed",transition:"all 0.25s",background:file?T.redFaint:T.creamWarm,minHeight:150,position:"relative",overflow:"hidden",opacity:consentGiven||optional?1:0.5}}
-      onMouseEnter={e=>{if(consentGiven&&!file){e.currentTarget.style.borderColor=T.redSoft;e.currentTarget.style.background=T.redFaint}}}
-      onMouseLeave={e=>{if(!file){e.currentTarget.style.borderColor=T.creamMid;e.currentTarget.style.background=T.creamWarm}}}>
-      <input ref={inputRef} type="file" accept="image/*" style={{display:"none"}} onChange={e=>{if(e.target.files[0])onFile(slotId,e.target.files[0])}}/>
-      {preview&&<img src={preview} alt={label} style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",borderRadius:14}}/>}
-      {preview&&<div style={{position:"absolute",inset:0,background:"rgba(122,14,30,0.5)",borderRadius:14,display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M20 6L9 17l-5-5"/></svg></div>}
-      {!preview&&<>
-        <div style={{width:36,height:36,borderRadius:10,background:"rgba(201,160,60,0.15)",color:T.redMid,display:"flex",alignItems:"center",justifyContent:"center"}}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        </div>
-        <div style={{fontSize:13,fontWeight:500,color:T.brownText,textAlign:"center"}}>{label}</div>
-        <div style={{fontSize:12,fontWeight:400,color:T.brownMuted,textAlign:"center"}}>{consentGiven?hint:"Consent required"}</div>
-        {optional&&<div style={{fontSize:9,fontWeight:500,letterSpacing:"0.1em",textTransform:"uppercase",color:T.brownLight,background:T.creamMid,padding:"3px 10px",borderRadius:100}}>Optional</div>}
-      </>}
-    </div>
-  );
-}
-
-function Q7_Photos({ photos, onPhoto, onBack, onNext, onSkip, consentGiven }) {
-  const SLOTS=[
-    {id:"roots",label:"Roots",     hint:"Close-up of your scalp area"},
-    {id:"mid",  label:"Mid-length",hint:"The middle section"},
-    {id:"ends", label:"Ends",      hint:"The tips of your hair"},
-    {id:"face", label:"Face",      hint:"Face shape & undertone", optional:true},
+// ── Q7 — Budget ───────────────────────────────────────────────────────────────
+function Q7_Budget({ answers, onAnswer, onBack, onNext }) {
+  const OPTIONS = [
+    {value:"drugstore", label:"Drugstore",   desc:"Under $15 per product"},
+    {value:"mid",       label:"Mid-range",   desc:"$15–$30 per product"},
+    {value:"luxury",    label:"Luxury",      desc:"$30+ per product"},
+    {value:"mix",       label:"Mix it up",   desc:"Show me options at every price point"},
   ];
-  const reqDone = consentGiven && photos.roots && photos.mid && photos.ends;
+  const val = answers.budget;
   return (
-    <div style={{maxWidth:520,margin:"0 auto",padding:"110px 24px 40px",minHeight:"100vh",display:"flex",flexDirection:"column",fontFamily:sans,animation:"pel-slideIn 0.4s ease forwards"}}>
-      <div style={{fontSize:10,fontWeight:500,letterSpacing:"0.16em",textTransform:"uppercase",color:T.redMid,marginBottom:8}}>Photo analysis</div>
-      <div style={{fontFamily:serif,fontSize:"clamp(26px,5vw,34px)",fontWeight:500,lineHeight:1.2,color:T.brownText,marginBottom:8}}>Let's see those curls</div>
-      <div style={{fontSize:14,fontWeight:400,color:T.brownMuted,lineHeight:1.55,marginBottom:24}}>Upload photos so our AI can identify your curl pattern, density, and health.</div>
-      {!consentGiven&&<div style={{background:T.redFaint,border:`1px solid ${T.redMid}`,borderRadius:12,padding:"12px 16px",marginBottom:20,fontSize:13,color:T.brownMuted,fontWeight:400}}>⚠️ Photo consent not given. Go back to enable uploads, or skip below.</div>}
-      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,marginBottom:4}}>
-        {SLOTS.map(s=><PhotoSlot key={s.id} slotId={s.id} label={s.label} hint={s.hint} optional={s.optional} file={photos[s.id]||null} onFile={onPhoto} consentGiven={consentGiven}/>)}
-      </div>
-      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginTop:"auto",paddingTop:36}}>
-        <button onClick={onBack} style={{display:"flex",alignItems:"center",gap:6,fontFamily:sans,fontSize:13,fontWeight:400,color:T.brownMuted,background:"none",border:"none",cursor:"pointer",padding:"10px 0"}} onMouseEnter={e=>e.currentTarget.style.color=T.brownText} onMouseLeave={e=>e.currentTarget.style.color=T.brownMuted}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back
-        </button>
-        <button onClick={reqDone?onNext:undefined} style={{display:"flex",alignItems:"center",gap:8,fontFamily:sans,fontSize:14,fontWeight:500,letterSpacing:"0.04em",padding:"14px 36px",border:"none",borderRadius:100,background:reqDone?`linear-gradient(135deg,${T.redDeep},${T.redMid})`:T.creamMid,color:reqDone?"#fff":T.brownLight,cursor:reqDone?"pointer":"not-allowed",transition:"all 0.3s"}}
-          onMouseEnter={e=>{if(reqDone){e.currentTarget.style.transform="translateY(-1px)";e.currentTarget.style.boxShadow=`0 8px 24px rgba(122,14,30,0.2)`}}}
-          onMouseLeave={e=>{e.currentTarget.style.transform="";e.currentTarget.style.boxShadow=""}}>
-          Analyze My Curls
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </button>
-      </div>
-      <div style={{textAlign:"center",marginTop:14}}>
-        <button onClick={onSkip} style={{background:"none",border:"none",cursor:"pointer",fontSize:13,color:T.brownMuted,fontFamily:sans,textDecoration:"underline",textUnderlineOffset:3,padding:"6px",fontWeight:400}}>
-          Skip photos — I'll identify my curl type manually
-        </button>
-      </div>
-    </div>
+    <QWrap
+      category="Budget"
+      title="What's your product price range?"
+      subtitle="We'll tailor recommendations to fit your budget."
+      onBack={onBack}
+      onNext={onNext}
+      nextDisabled={!val}
+      nextLabel="Choose My Curl Type"
+    >
+      {OPTIONS.map(o => (
+        <SingleOption
+          key={o.value}
+          label={o.label}
+          desc={o.desc}
+          selected={val === o.value}
+          onClick={() => onAnswer("budget", o.value)}
+        />
+      ))}
+    </QWrap>
   );
 }
 
@@ -447,65 +394,8 @@ export function VisualHairType({ answers, onAnswer, onBack, onNext }) {
   );
 }
 
-// ── Photo consent ─────────────────────────────────────────────────────────────
-export function PhotoConsent({ onAccept, onSkip, onBack, onNavigate }) {
-  const [checked, setChecked] = useState(false);
-  return (
-    <>
-      <ConsentHeader/>
-      <div style={{maxWidth:520,margin:"0 auto",padding:"110px 24px 40px",minHeight:"100vh",display:"flex",flexDirection:"column",fontFamily:sans,animation:"pel-slideIn 0.4s ease forwards"}}>
-        <style>{`@keyframes pel-slideIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}`}</style>
-        <div style={{fontSize:10,fontWeight:500,letterSpacing:"0.16em",textTransform:"uppercase",color:T.redMid,marginBottom:8}}>Photo upload</div>
-        <div style={{fontFamily:serif,fontSize:"clamp(26px,5vw,32px)",fontWeight:500,lineHeight:1.2,color:T.brownText,marginBottom:8}}>A note about your photos.</div>
-        <div style={{fontSize:14,fontWeight:400,color:T.brownMuted,lineHeight:1.55,marginBottom:28}}>You don't have to upload photos — but here's what happens if you do.</div>
-        <div style={{background:"#fff",borderRadius:16,border:`1px solid ${T.creamMid}`,padding:"24px",marginBottom:20}}>
-          <div style={{fontSize:14,fontWeight:500,color:T.brownText,marginBottom:16}}>How we use your photos</div>
-          {[
-            {icon:"🤖",title:"Groq AI Analysis",text:"Your photos are sent to Groq's AI to identify your curl pattern, face shape, and skin undertone. Groq may retain data per their own privacy policy."},
-            {icon:"🗄️",title:"Pelora Storage",  text:"If you agree below, Pelora will securely store your photos and quiz answers to train our own curl model. Your data is never sold or used for advertising."},
-            {icon:"✋",title:"Your Rights",      text:"You can request deletion of your data at any time by contacting us. Opting out has zero effect on your results."},
-          ].map((item,i,arr)=>(
-            <div key={item.title} style={{display:"flex",gap:12,alignItems:"flex-start",paddingBottom:i<arr.length-1?16:0,marginBottom:i<arr.length-1?16:0,borderBottom:i<arr.length-1?`1px solid ${T.creamMid}`:"none"}}>
-              <span style={{fontSize:18,flexShrink:0,marginTop:1}}>{item.icon}</span>
-              <div>
-                <div style={{fontSize:13,fontWeight:500,color:T.brownText,marginBottom:3}}>{item.title}</div>
-                <div style={{fontSize:13,fontWeight:400,color:T.brownMuted,lineHeight:1.6}}>{item.text}</div>
-              </div>
-            </div>
-          ))}
-          <div style={{display:"flex",gap:20,flexWrap:"wrap",marginTop:16,paddingTop:14,borderTop:`1px solid ${T.creamMid}`}}>
-            <button onClick={()=>onNavigate?.("privacy")} style={{fontSize:13,color:T.redMid,fontWeight:500,textDecoration:"underline",textUnderlineOffset:3,background:"none",border:"none",cursor:"pointer",padding:0,fontFamily:sans}}>Pelora Privacy Policy ↗</button>
-            <a href="https://groq.com/privacy-policy" target="_blank" rel="noopener noreferrer" style={{fontSize:13,color:T.redMid,fontWeight:500,textDecoration:"underline",textUnderlineOffset:3}}>Groq AI Privacy Policy ↗</a>
-          </div>
-        </div>
-        <label style={{display:"flex",gap:12,alignItems:"flex-start",background:checked?"#fff":T.creamWarm,border:`1.5px solid ${checked?T.redMid:"transparent"}`,borderRadius:14,padding:"16px 18px",cursor:"pointer",marginBottom:28,transition:"all 0.2s"}}>
-          <div style={{width:20,height:20,borderRadius:5,border:`1.5px solid ${checked?T.redMid:T.brownLight}`,background:checked?T.redMid:"transparent",flexShrink:0,marginTop:1,display:"flex",alignItems:"center",justifyContent:"center",transition:"all 0.2s"}}>
-            {checked&&<svg width="11" height="9" viewBox="0 0 11 9" fill="none"><polyline points="1,5 4,8 10,1" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
-          </div>
-          <input type="checkbox" checked={checked} onChange={e=>setChecked(e.target.checked)} style={{display:"none"}}/>
-          <span style={{fontSize:13,color:T.brownText,lineHeight:1.6,fontWeight:400}}>I have read and agree to Pelora's photo data use policy. I understand my photos will be processed by Groq AI and may be stored by Pelora for model training.</span>
-        </label>
-        <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginTop:"auto",paddingTop:8}}>
-          <button onClick={onBack} style={{display:"flex",alignItems:"center",gap:6,fontFamily:sans,fontSize:13,fontWeight:400,color:T.brownMuted,background:"none",border:"none",cursor:"pointer",padding:"10px 0"}} onMouseEnter={e=>e.currentTarget.style.color=T.brownText} onMouseLeave={e=>e.currentTarget.style.color=T.brownMuted}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>Back
-          </button>
-          <button onClick={checked?onAccept:undefined} style={{display:"flex",alignItems:"center",gap:8,fontFamily:sans,fontSize:14,fontWeight:500,letterSpacing:"0.04em",padding:"14px 32px",border:"none",borderRadius:100,background:checked?`linear-gradient(135deg,${T.redDeep},${T.redMid})`:T.creamMid,color:checked?"#fff":T.brownLight,cursor:checked?"pointer":"not-allowed",transition:"all 0.3s"}}
-            onMouseEnter={e=>{if(checked){e.currentTarget.style.transform="translateY(-1px)";e.currentTarget.style.boxShadow=`0 8px 24px rgba(122,14,30,0.2)`}}}
-            onMouseLeave={e=>{e.currentTarget.style.transform="";e.currentTarget.style.boxShadow=""}}>
-            Upload My Photos
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
-        </div>
-        <div style={{textAlign:"center",marginTop:16}}>
-          <button onClick={onSkip} style={{background:"none",border:"none",cursor:"pointer",fontSize:13,color:T.brownMuted,fontFamily:sans,textDecoration:"underline",textUnderlineOffset:3,padding:"8px",fontWeight:400}}>Skip photo upload for now</button>
-        </div>
-      </div>
-    </>
-  );
-}
-
 // ── Main QuizFlow export ──────────────────────────────────────────────────────
-export function QuizFlow({ answers, onAnswer, currentQ, onNext, onBack, onSkipPhotos, photos, onPhoto, consentGiven }) {
+export function QuizFlow({ answers, onAnswer, currentQ, onNext, onBack }) {
   const screens = [
     <Q1_Goals    key={0} answers={answers} onAnswer={onAnswer} onBack={onBack} onNext={onNext}/>,
     <Q2_Density  key={1} answers={answers} onAnswer={onAnswer} onBack={onBack} onNext={onNext}/>,
@@ -513,7 +403,7 @@ export function QuizFlow({ answers, onAnswer, currentQ, onNext, onBack, onSkipPh
     <Q4_History  key={3} answers={answers} onAnswer={onAnswer} onBack={onBack} onNext={onNext}/>,
     <Q5_Journey  key={4} answers={answers} onAnswer={onAnswer} onBack={onBack} onNext={onNext}/>,
     <Q6_Scalp    key={5} answers={answers} onAnswer={onAnswer} onBack={onBack} onNext={onNext}/>,
-    <Q7_Photos   key={6} photos={photos} onPhoto={onPhoto} onBack={onBack} onNext={onNext} onSkip={onSkipPhotos} consentGiven={consentGiven}/>,
+    <Q7_Budget   key={6} answers={answers} onAnswer={onAnswer} onBack={onBack} onNext={onNext}/>,
   ];
   const stepNum = currentQ + 1;
   return (
@@ -524,5 +414,3 @@ export function QuizFlow({ answers, onAnswer, currentQ, onNext, onBack, onSkipPh
     </div>
   );
 }
-
-export { CURL_TYPE_MAP };

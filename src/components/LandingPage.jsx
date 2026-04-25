@@ -1,14 +1,6 @@
 // src/components/LandingPage.jsx
-// ADA contrast fixes applied:
-//   - Nav links: rgba(255,255,255,0.7) → #fff (on crimson bg, was failing)
-//   - Hero sub text: brownMuted #7A6858 → #5C4A3A (lifted to 4.6:1 on cream)
-//   - How-it-works card body: brownMuted → #5C4A3A
-//   - Step descriptions: brownMuted → #5C4A3A
-//   - Footer text: brownLight #A69484 → #7A6858 (lifted to 4.5:1 on cream)
-//   - Hero note: brownLight → #7A6858
-//   - Curl type pill label: brownMuted → #5C4A3A
-//   - Phone mockup option text uses full brownText
 import { useEffect, useState } from "react";
+import { Navbar } from "./Navbar";
 
 const T = {
   redDeep:"#7A0E1E", redMid:"#9B1B30", redSoft:"#C4485A",
@@ -16,8 +8,8 @@ const T = {
   gold:"#C9A03C", goldLight:"#DFC06E", goldShimmer:"#EDD99B", goldPale:"#F7EDCE",
   cream:"#FDFAF4", creamWarm:"#F8F2E8", creamMid:"#EFE6D6",
   brownText:"#3D2B1F",
-  brownMuted:"#5C4A3A",  // ADA fix: was #7A6858 (3.8:1), now 4.7:1 on cream
-  brownLight:"#7A6858",  // ADA fix: was #A69484 (2.9:1), now 4.5:1 on cream — footer/hints only
+  brownMuted:"#5C4A3A",
+  brownLight:"#7A6858",
 };
 const serif = "'Cormorant Garamond', Georgia, serif";
 const sans  = "'DM Sans', system-ui, sans-serif";
@@ -57,28 +49,12 @@ function Splash({ onDone }) {
   );
 }
 
-function Navbar({ onStartQuiz, onNavigate, visible }) {
-  const [mob, setMob] = useState(false);
-  const NAV = [{label:"Home",screen:"landing"},{label:"My Results",screen:"results"},{label:"Challenge",screen:"challenge"},{label:"Tutorials",screen:"tutorials"},{label:"Products",screen:"products"}];
+// NavbarWrapper fades in after splash — wraps the shared Navbar with opacity transition
+function NavbarWrapper({ onStartQuiz, onNavigate, visible }) {
   return (
-    <nav style={{position:"fixed",top:0,left:0,right:0,zIndex:100,display:"flex",alignItems:"center",justifyContent:"space-between",padding:"18px 40px",background:"rgba(253,250,244,0.92)",backdropFilter:"blur(16px)",WebkitBackdropFilter:"blur(16px)",borderBottom:`1px solid rgba(201,160,60,0.15)`,opacity:visible?1:0,transition:"opacity 0.6s ease"}}>
-      <button onClick={()=>onNavigate("landing")} style={{border:"none",cursor:"pointer",padding:0,background:"none"}}>
-        <span style={{fontFamily:serif,fontSize:26,fontWeight:600,fontStyle:"italic",background:`linear-gradient(135deg,${T.redMid},${T.redSoft})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>Pelora</span>
-      </button>
-      <ul className="pel-desk" style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}}>
-        {NAV.map(n=>(
-          <li key={n.screen}><button onClick={()=>onNavigate(n.screen)} style={{background:"none",border:"none",cursor:"pointer",fontFamily:sans,fontSize:13,fontWeight:400,letterSpacing:"0.06em",color:T.brownMuted,transition:"color 0.3s"}} onMouseEnter={e=>e.currentTarget.style.color=T.redMid} onMouseLeave={e=>e.currentTarget.style.color=T.brownMuted}>{n.label}</button></li>
-        ))}
-      </ul>
-      <button className="pel-desk" onClick={onStartQuiz} style={{fontSize:12,fontWeight:500,letterSpacing:"0.08em",textTransform:"uppercase",padding:"10px 24px",border:`1.5px solid ${T.redMid}`,borderRadius:100,background:"transparent",color:T.redMid,cursor:"pointer",fontFamily:sans,transition:"all 0.3s"}} onMouseEnter={e=>{e.currentTarget.style.background=T.redMid;e.currentTarget.style.color=T.cream}} onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color=T.redMid}}>Take the Quiz</button>
-      <button className="pel-mob" onClick={()=>setMob(o=>!o)} style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:8,flexDirection:"column",gap:5}}>
-        {[0,1,2].map(i=><div key={i} style={{width:22,height:1.5,background:T.brownText,borderRadius:2}}/>)}
-      </button>
-      {mob&&<div style={{position:"fixed",top:61,left:0,right:0,background:"rgba(253,250,244,0.98)",backdropFilter:"blur(16px)",borderBottom:`1px solid ${T.creamMid}`,display:"flex",flexDirection:"column",padding:"12px 0",zIndex:99}}>
-        {NAV.map(n=><button key={n.screen} onClick={()=>{onNavigate(n.screen);setMob(false)}} style={{padding:"14px 32px",textAlign:"left",background:"none",border:"none",cursor:"pointer",fontFamily:sans,fontSize:15,color:T.brownText}}>{n.label}</button>)}
-        <div style={{padding:"12px 32px"}}><button onClick={()=>{onStartQuiz();setMob(false)}} style={{width:"100%",padding:"12px",borderRadius:100,background:`linear-gradient(135deg,${T.redDeep},${T.redMid})`,border:"none",color:"#fff",fontFamily:sans,fontSize:14,fontWeight:500,cursor:"pointer"}}>Take the Quiz</button></div>
-      </div>}
-    </nav>
+    <div style={{ opacity: visible ? 1 : 0, transition: "opacity 0.6s ease" }}>
+      <Navbar onNavigate={(screen) => screen === "quiz" ? onStartQuiz() : onNavigate(screen)} activeScreen="landing" />
+    </div>
   );
 }
 
@@ -89,13 +65,13 @@ function Hero({ onStartQuiz, visible }) {
       <div style={{position:"absolute",borderRadius:"50%",filter:"blur(120px)",pointerEvents:"none",opacity:0.12,width:400,height:400,background:T.redFaint,bottom:"-50px",right:"-80px"}}/>
       {visible&&<>
         <div style={{display:"inline-flex",alignItems:"center",gap:8,fontSize:11,fontWeight:500,letterSpacing:"0.14em",textTransform:"uppercase",color:T.redMid,background:T.redFaint,padding:"8px 20px",borderRadius:100,marginBottom:32,animation:"pel-fadeUp 0.7s ease forwards"}}>
-          <span style={{width:6,height:6,background:T.redMid,borderRadius:"50%",display:"inline-block"}}/>AI-Powered Hair Analysis
+          <span style={{width:6,height:6,background:T.redMid,borderRadius:"50%",display:"inline-block"}}/>Personalized Hair Analysis
         </div>
         <h1 style={{fontFamily:serif,fontSize:"clamp(42px,6vw,72px)",fontWeight:500,lineHeight:1.1,color:T.brownText,maxWidth:700,marginBottom:20,animation:"pel-fadeUp 0.8s ease 0.2s both"}}>
           Your curls,<br/><em style={{fontStyle:"italic",background:`linear-gradient(135deg,${T.redDeep},${T.redMid})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>finally understood.</em>
         </h1>
         <p style={{fontSize:16,fontWeight:400,lineHeight:1.7,color:T.brownMuted,maxWidth:460,marginBottom:40,animation:"pel-fadeUp 0.8s ease 0.4s both"}}>
-          Take a quick selfie and get your curl pattern, face shape, and a personalized hair routine — no guesswork, no salon visit needed.
+          Answer a few questions and get your curl pattern, porosity score, and a personalized hair routine — no guesswork, no salon visit needed.
         </p>
         <button onClick={onStartQuiz} style={{display:"inline-flex",alignItems:"center",gap:10,fontFamily:sans,fontSize:15,fontWeight:500,letterSpacing:"0.06em",padding:"16px 40px",border:"none",borderRadius:100,background:`linear-gradient(135deg,${T.redDeep},${T.redMid})`,color:"#fff",cursor:"pointer",transition:"transform 0.3s ease,box-shadow 0.3s ease",animation:"pel-fadeUp 0.8s ease 0.6s both"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow=`0 12px 32px rgba(122,14,30,0.25)`}} onMouseLeave={e=>{e.currentTarget.style.transform="";e.currentTarget.style.boxShadow=""}}>
           Start My Free Analysis
@@ -117,7 +93,7 @@ function PhoneMockup() {
         <div style={{background:T.cream,borderRadius:20,padding:20,border:`1px solid ${T.creamMid}`,minHeight:360}}>
           <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
             <span style={{fontFamily:serif,fontSize:16,fontWeight:600,fontStyle:"italic",color:T.redMid}}>pelora</span>
-            <span style={{fontSize:10,color:T.brownLight,fontWeight:400}}>Step 2 of 8</span>
+            <span style={{fontSize:10,color:T.brownLight,fontWeight:400}}>Step 2 of 7</span>
           </div>
           <div style={{height:3,background:T.creamMid,borderRadius:3,marginBottom:16,overflow:"hidden"}}>
             <div style={{width:"25%",height:"100%",background:`linear-gradient(90deg,${T.redDeep},${T.redMid})`,borderRadius:3}}/>
@@ -141,7 +117,7 @@ function PhoneMockup() {
 
 function HowItWorks() {
   const cards=[
-    {title:"Curl classification",desc:"AI analyzes your photo and gives you a full 2A–4C curl profile, porosity score, density, and skin undertone.",icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>},
+    {title:"Curl classification",desc:"Select your curl type from our visual guide and get a full 2A–4C curl profile, porosity score, and density breakdown.",icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>},
     {title:"Transform in 30 days",desc:"The 30-day challenge that makes healthy hair habits feel like a game — not a chore.",icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>},
     {title:"Product matches",desc:"Real recs — names, prices, links — matched to your exact curl type, porosity, and hair goals.",icon:<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>},
   ];
@@ -181,7 +157,7 @@ function CurlTypes() {
 }
 
 function Steps() {
-  const steps=[{num:"01",title:"Take the quiz",desc:"Answer a few questions about your hair goals, history, and scalp health."},{num:"02",title:"Snap a selfie",desc:"Our AI analyzes your curl pattern, face shape, and skin undertone in seconds."},{num:"03",title:"Get your plan",desc:"Receive personalized product recs, styling techniques, and your 4-week challenge."}];
+  const steps=[{num:"01",title:"Take the quiz",desc:"Answer a few questions about your hair goals, history, and scalp health."},{num:"02",title:"Pick your curl type",desc:"Choose from our visual curl type guide — no photos needed."},{num:"03",title:"Get your plan",desc:"Receive personalized product recs, styling techniques, and your 4-week challenge."}];
   return (
     <section style={{padding:"72px 24px",background:T.creamWarm}}>
       <div style={{maxWidth:720,margin:"0 auto",textAlign:"center"}}>
@@ -208,7 +184,7 @@ function FinalCTA({ onStartQuiz }) {
         <h2 style={{fontFamily:serif,fontSize:"clamp(32px,5vw,48px)",fontWeight:500,color:T.brownText,lineHeight:1.15,marginBottom:16}}>
           Ready to meet<br/>your <em style={{fontStyle:"italic",background:`linear-gradient(135deg,${T.redDeep},${T.redMid})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>curl identity?</em>
         </h2>
-        <p style={{fontSize:15,fontWeight:400,color:T.brownMuted,lineHeight:1.7,marginBottom:36}}>Five minutes. One quiz. A full AI analysis of your curl pattern, porosity, face shape, and a personalized routine on the other side.</p>
+        <p style={{fontSize:15,fontWeight:400,color:T.brownMuted,lineHeight:1.7,marginBottom:36}}>Five minutes. One quiz. A personalized breakdown of your curl pattern, porosity, density, and a routine built around your hair.</p>
         <button onClick={onStartQuiz} style={{display:"inline-flex",alignItems:"center",gap:10,fontFamily:sans,fontSize:15,fontWeight:500,letterSpacing:"0.06em",padding:"16px 44px",border:"none",borderRadius:100,background:`linear-gradient(135deg,${T.redDeep},${T.redMid})`,color:"#fff",cursor:"pointer",transition:"transform 0.3s ease,box-shadow 0.3s ease"}} onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-2px)";e.currentTarget.style.boxShadow=`0 12px 32px rgba(122,14,30,0.25)`}} onMouseLeave={e=>{e.currentTarget.style.transform="";e.currentTarget.style.boxShadow=""}}>
           Start my curl quiz — it's free
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -222,7 +198,7 @@ export function PlaceholderPage({ activePage, onStartQuiz, onNavigate }) {
   useEffect(()=>{ injectFonts(); },[]);
   return (
     <div style={{fontFamily:sans}}>
-      <Navbar onStartQuiz={onStartQuiz} onNavigate={onNavigate} visible={true}/>
+      <Navbar onNavigate={(screen) => screen === "quiz" ? onStartQuiz() : onNavigate(screen)} activeScreen={activePage}/>
       <div style={{minHeight:"100vh",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:"80px 24px",textAlign:"center",background:T.cream}}>
         <p style={{fontFamily:serif,fontSize:"clamp(22px,4vw,32px)",fontWeight:500,fontStyle:"italic",color:T.brownText,marginBottom:32,lineHeight:1.4,maxWidth:440}}>Take the quiz to<br/>discover more.</p>
         <button onClick={onStartQuiz} style={{display:"inline-flex",alignItems:"center",gap:10,fontFamily:sans,fontSize:15,fontWeight:500,padding:"16px 40px",border:"none",borderRadius:100,background:`linear-gradient(135deg,${T.redDeep},${T.redMid})`,color:"#fff",cursor:"pointer"}} onMouseEnter={e=>e.currentTarget.style.transform="translateY(-2px)"} onMouseLeave={e=>e.currentTarget.style.transform=""}>
@@ -242,7 +218,7 @@ export function LandingPage({ onStartQuiz, onNavigate, quizCompleted }) {
   return (
     <div style={{fontFamily:sans}}>
       {!splashDone&&<Splash onDone={handleSplashDone}/>}
-      <Navbar onStartQuiz={onStartQuiz} onNavigate={onNavigate} visible={navVisible}/>
+      <NavbarWrapper onStartQuiz={onStartQuiz} onNavigate={onNavigate} visible={navVisible}/>
       <Hero onStartQuiz={onStartQuiz} visible={splashDone}/>
       <PhoneMockup/>
       <HowItWorks/>
@@ -251,7 +227,7 @@ export function LandingPage({ onStartQuiz, onNavigate, quizCompleted }) {
       <FinalCTA onStartQuiz={onStartQuiz}/>
       <footer style={{padding:"36px 40px",borderTop:`1px solid ${T.creamMid}`,display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:12}}>
         <span style={{fontFamily:serif,fontSize:20,fontWeight:600,fontStyle:"italic",background:`linear-gradient(135deg,${T.redMid},${T.redSoft})`,WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",backgroundClip:"text"}}>pelora</span>
-        <p style={{fontSize:12,color:T.brownLight,fontWeight:400}}>Built for waves, curls, coils & all textures in between.</p>
+        <p style={{fontSize:12,color:T.brownLight,fontWeight:400}}>Built for waves, curls, coils &amp; all textures in between.</p>
         <p style={{fontSize:12,color:T.brownLight,fontWeight:400}}>© 2026 Pelora</p>
       </footer>
     </div>
